@@ -34,7 +34,7 @@
 				</div>
 				Confirmer le mot de passe :
 				<div>
-					<input name="userpassconfirm" type="text" class="textbox textbox1" value="Confirmer mot de passe" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Confirmer mot de passe';}" >
+					<input name="userpassconfirm" type="password" class="textbox textbox1" value="Confirmer mot de passe" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Confirmer mot de passe';}" >
 					<div class="clear"></div>
 				</div>
 				Newsletter :

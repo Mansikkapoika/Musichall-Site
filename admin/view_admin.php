@@ -49,28 +49,11 @@
 				<div class="clear"></div><div class="clear"></div>
 				<div class="clear"></div><hr><br />
 
-				<u>Ajouter un article</u> :<br /><br />
+				<u>Gestion des locations</u> :<br /><br />
 				<div class="add-cart">								
-					<h4><a href="preview.html">Ajouter un article</a></h4>
+					<h4><a href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/admin/locations">Gérer les locations</a></h4>
 					<div class="clear"></div>
 				</div>
-				<div class="add-cart">								
-					<h4><a href="preview.html">Modifier un article</a></h4>
-					<div class="clear"></div>
-				</div>
-				<div class="clear"></div>
-
-				<u>Supprimer un article</u> :<br /><br />
-				<form method="post" action="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/controller/admin/article/supp_formclick.php">
-					Nom :
-					<div class="clear"></div>
-					<div>
-						<input name="souscategorie" type="text" class="textbox textbox1" value="Nom de l'article" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Nom de l'article';}" >
-						<div class="clear"></div>
-					</div>
-					<input type="hidden" name="form_delArticle" value="1" />
-					<input type="submit" value="Submit" class="mybutton">
-				</form><div class="clear"></div><div class="clear"></div>
 				
 			</div>
 		</div>		

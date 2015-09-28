@@ -1,6 +1,6 @@
 ﻿<?php
 
-class controleurAdmin {
+class controleurLocations {
 
 	private $Dir;
 	private $user;
@@ -8,7 +8,11 @@ class controleurAdmin {
 
 	public function __construct()
 	{
-
+		if(file_exists(getcwd().'/../../../model/model.php')) {
+			$this->Dir = getcwd().'/../../../';
+			require_once getcwd().'/../../../model/get.php';
+			require_once getcwd().'/../../../model/user.php';
+		}
 		if(file_exists(getcwd().'/../../model/model.php')) {
 			$this->Dir = getcwd().'/../../';
 			require_once getcwd().'/../../model/get.php';
@@ -30,11 +34,11 @@ class controleurAdmin {
 
 	}
 
-	public function afficheAdmin() {
+	public function afficheLocations() {
 		$titre = 'Full thought';
-		$position = 'Administration';
+		$position = 'Gestion locations';
 
-		// Vérification admin (Affiche lien administration menu + permission d'accès page)
+		// Vérification admin (Menu lien administration)
 		if (isset($_SESSION['username'])) {
 			$username = $this->user->echapVar($_SESSION['username']);
 			$reqAdmin = $this->user->getUser($username);
@@ -54,7 +58,7 @@ class controleurAdmin {
 	{
 		if ($access)	// Si admin
 		{
-			require_once $this->Dir.'admin/view_admin.php';
+			require_once $this->Dir.'admin/locations/view_locations.php';
 			require_once $this->Dir.'gabarit.php';
 		}
 		else
