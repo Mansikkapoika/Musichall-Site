@@ -3,6 +3,11 @@ require_once 'model.php';
 
 class Get extends Model {
 
+	public function echapVar($ovar)
+	{
+		return $this -> getBdd() -> real_escape_string($ovar);
+	}
+
 	public function getSousMenus()
 	{
 		return $resultat = $this->getBdd()->query("SELECT * FROM souscategorie");
@@ -10,7 +15,12 @@ class Get extends Model {
 
 	public function getCat()
 	{
-		return $this->getBdd()->query("SELECT idCategorie, libelle as nomCat FROM categorie");
+		return $this->getBdd()->query("SELECT * FROM categorie");
+	}
+
+	public function getCatSelect($id)
+	{
+		return $this->getBdd()->query("SELECT * FROM categorie WHERE idCategorie ='$id'");
 	}
 
 	public function getSousCat($id)

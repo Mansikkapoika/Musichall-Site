@@ -2,7 +2,7 @@
 
 <div class="content_top">
 	<div class="wrap">
-		<h3>Latest Products</h3>
+		<h3>Derniers produits</h3>
 	</div>
 	<div class="line"> </div>
 	<div class="wrap">
@@ -35,43 +35,38 @@
 		<div class="content-bottom-left">
 			<div class="categories">
 				<ul>
-					<h3>Browse All Categories</h3>
-					<li><a href="#">Appliances</a></li>
-					<li><a href="#">Sports Equipments</a></li>
-					<li><a href="#">Computers & Electronics</a></li>
-					<li><a href="#">Office supplies</a></li>
-					<li><a href="#">Health & Beauty</a></li>
-					<li><a href="#">Home & Garden</a></li>
-					<li><a href="#">Apparel</a></li>
-					<li><a href="#">Toys & Games</a></li>
-					<li><a href="#">Automotive</a></li>
+					<h3>Toutes les catégories</h3>
+					<?php while ($item = $getCat->fetch_array()) { ?>
+					<li><a href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/choice/?cat=<?php echo $item ['idCategorie']; ?>"><?php echo $item['libelle']; ?></a></li>
+					<?php } ?>
+					<li><a href="#">Promotions</a></li>
 				</ul>
 			</div>		
 			<div class="buters-guide">
-				<h3>Buyers Guide</h3>
-				<p><span>We want you to be happy with your purchase.</span></p>	
-				<p>So we're committed to giving you all the tools to make the right decision with minimum fuss. </p>
+				<h3>Guides d'achats</h3>
+				<p><span>Ne vous trompez plus !</span></p>	
+				<p>Parcourez la page d'aide pour trouver les réponses à toutes vos questions. </p>
 			</div>	
 			<div class="add-banner">
-				<img src="content/images/camera.png" alt="" />
+				<img src="content/images/computer.png" alt="" />
 				<div class="banner-desc">
-					<h4>Electronics</h4>
+					<h4>Aide</h4>
 					<a href="#">More Info</a>
 				</div>
 				<div class="clear"></div>
 			</div>
-			<div class="add-banner add-banner2">
+			<!-- <div class="add-banner add-banner2">
 				<img src="content/images/computer.png" alt="" />
 				<div class="banner-desc">
 					<h4>Computers</h4>
 					<a href="#">More Info</a>
 				</div>
 				<div class="clear"></div>
-			</div>
+			</div> -->
 		</div>
 
 		<div class="content-bottom-right">
-			<h3>Browse All Categories</h3>
+			<h3>Toutes les catégories</h3>
 			<div class="section group">
 				<div class="grid_1_of_4 images_1_of_4">
 					<h4><a href="preview.html">Whirlpool LTE5243D 3.4 CuFt.... </a></h4>
@@ -241,20 +236,20 @@
 				</div>
 			</div>
 			<div class="product-articles">
-				<h3>Browse All Categories</h3>
+				<h3>Toutes les catégories</h3>
 				<ul>
 					<li>
 						<div class="article">
 							<p><span>Aenean vitae massa dolor</span></p>
 							<p>Phasellus in quam dui. Nunc ornare, tellus rutrum porttitor imperdiet, dui leo molestie nisl, sit amet dignissim nibh magna pharetra quam. Nunc ultrices pellentesque massa, ac adipiscing dui rutrum id. In cursus augue non erat faucibus eu condimentum dolor molestie.</p>
-							<p><a href="#">+ Read Full article</a></p>
+							<p><a href="#">+ Lire la suite</a></p>
 						</div>
 					</li>
 					<li>
 						<div class="article">
 							<p><span>Phasellus sollicitudin consectetur</span></p>
 							<p>Cras aliquam, odio ac consectetur tincidunt, eros nunc fermentum augue, quis rutrum ante lectus ac lectus. Fusce sed tellus orci, et feugiat urna. Integer et dictum leo. Nulla consectetur tempus orci sed consequat. Mauris cursus est a sapien venenatis faucibus. Etiam sagittis convallis volutpat.</p>
-							<p><a href="#">+ Read Full article</a></p>
+							<p><a href="#">+ Lire la suite</a></p>
 						</div>
 					</li>
 				</ul>

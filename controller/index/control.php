@@ -23,21 +23,6 @@ class controleurAccueil {
 		$titre = 'Music Hall';
 		$position = 'Accueil';
 
-		// Tableaux catégories
-
-		$tabCat = [];
-		$getCat = $this->get->getCat();
-
-		foreach ($getCat as $menus) {
-			$tabSousCat = [];
-			array_push($tabSousCat, $menus['nomCat']);
-			$getSousCat = $this->get->getSousCat($menus['idCategorie']);
-			foreach($getSousCat as $test) {
-				array_push($tabSousCat,$test['nomSousCat']);
-			}
-			array_push($tabCat,$tabSousCat);
-		}
-
 		// Vérification admin (Menu lien administration)
 		if (isset($_SESSION['username'])) {
 			$username = $this->user->echapVar($_SESSION['username']);
@@ -51,6 +36,8 @@ class controleurAccueil {
 				$access = false;
 			}
 		}
+
+		$getCat = $this->get->getCat();
 
 	if (isset($_SESSION['username']))	// Si connecté
 	{

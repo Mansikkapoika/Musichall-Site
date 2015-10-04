@@ -30,7 +30,7 @@
 						while($ligne==true) 
 						{ 
 							$num=$ligne['idCategorie']; 
-							$nom=$ligne['nomCat']; 
+							$nom=$ligne['libelle']; 
 							echo "<option selected value='$num'>$nom</option>"; 
 							$ligne = $jeuenr -> fetch_assoc(); } ?>
 							<div class="clear"></div>

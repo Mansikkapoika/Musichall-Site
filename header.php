@@ -62,9 +62,9 @@
 			</div>
 			<div class="header_bottom">
 				<div class="slider-text">
-					<h2>Lorem Ipsum Placerat <br/>Elementum Quistue Tunulla Maris</h2>
-					<p>Vivamus vitae augue at quam frigilla tristique sit amet<br/> acin ante sikumpre tisdin.</p>
-					<a href="#">Sitamet Tortorions</a>
+					<h2>Les promos sont là ! <br/></h2>
+					<p>Du matériel à prix réduits sont disponibles<br/> dans la catégorie des promotions.</p>
+					<a href="#">Promotions</a>
 				</div>
 				<div class="slider-img">
 					<img src="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/content/images/slider-img.png" alt="" />
