@@ -25,9 +25,17 @@ class Get extends Model {
 
 	public function getSousCat($id)
 	{
-		return $this->getBdd()->query("SELECT sc.libelle as nomSousCat FROM souscategorie as sc
-			INNER JOIN categorie as c ON c.idCategorie = sc.idCategorie
-			WHERE c.idCategorie = $id");
+		return $this->getBdd()->query("SELECT * FROM souscategorie WHERE idCategorie ='$id'");
+	}
+
+	public function getMateriel()
+	{
+		
+	}
+
+	public function getMaterielSelect($id)
+	{
+		return $this->getBdd()->query("SELECT * FROM materiel WHERE idSousCategorie='$id'");
 	}
 
 }

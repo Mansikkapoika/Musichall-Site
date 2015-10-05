@@ -1,5 +1,5 @@
 ﻿<?php
-
+// Début du contrôleur du formulaire de suppression, passage des paramètres (environnement de passage des variables) éventuels
 require_once 'form.php';
 $ctrl = new ControleurDelCat();
 session_start();

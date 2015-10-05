@@ -19,14 +19,9 @@ class User extends Model {
 	{
 		$this->getBdd()->query("INSERT INTO utilisateur VALUES ('', '$nom', '$prenom', '$username', '$password', '$email', NOW(), $newsletter, 1)");
 	}
-	
-	public function getSecu($code,$username)
-	{
-		return $this->getBdd()->query("SELECT * FROM utilisateur WHERE pseudo='$username' AND codeSecu=$code;"); 
-	}
 
 
-
+	// A changer
 
 	public function changePass($username,$password)
 	{

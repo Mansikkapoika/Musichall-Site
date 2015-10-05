@@ -1,6 +1,6 @@
 ﻿<?php
 
-class controleurLocations {
+class controleurCommentaires {
 
 	private $Dir;
 	private $user;
@@ -34,9 +34,9 @@ class controleurLocations {
 
 	}
 
-	public function afficheLocations() {
+	public function afficheCommentaires() {
 		$titre = 'Full thought';
-		$position = 'Gestion locations';
+		$position = 'Gestion commentaires';
 
 		// Vérification admin (Menu lien administration)
 		if (isset($_SESSION['username'])) {
@@ -52,13 +52,14 @@ class controleurLocations {
 			}
 		}
 
+		// Utilisation de l'accesseur pour les informations des catégories
 		$jeuenr = $this->get->getCat();
 
 	if (isset($_SESSION['username']))	// Si connecté
 	{
 		if ($access)	// Si admin
 		{
-			require_once $this->Dir.'admin/locations/view_locations.php';
+			require_once $this->Dir.'admin/commentaires/view_commentaires.php';
 			require_once $this->Dir.'gabarit.php';
 		}
 		else

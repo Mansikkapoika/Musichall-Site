@@ -1,5 +1,6 @@
 <?php ob_start(); ?>
 
+<!-- Vue de la page lorsque quelqu'un est déjà connecté -->
 <div class="wrap">
 	<div class="preview-page">
 		<div class="contact-form">

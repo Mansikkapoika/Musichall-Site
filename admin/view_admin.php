@@ -7,6 +7,8 @@
 			<div class="clear"></div>
 			<div class="clear"></div>
 
+			<!-- Partie d'ajout d'une catégorie -->
+
 			<form method="post" action="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/controller/admin/addCategorie/formclick_add.php">
 				<u>Ajouter une catégorie</u> :<br /><br />
 				Nom :
@@ -18,6 +20,8 @@
 				<input type="submit" value="Submit" class="mybutton">
 			</form>
 			<div class="clear"></div><br /><hr><br />
+
+			<!-- Partie d'ajout d'une sous-catégorie -->
 
 			<u>Ajouter une sous-catégorie</u> :<br /><br />
 			<form method="post" action="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/controller/admin/addCategorie/formclick_add.php">
@@ -49,9 +53,21 @@
 				<div class="clear"></div><div class="clear"></div>
 				<div class="clear"></div><hr><br />
 
-				<u>Gestion des locations</u> :<br /><br />
+				<!-- Partie de gestion des commentaires (pointe vers une autre page) -->
+
+				<u>Gestion des commentaires</u> :<br /><br />
 				<div class="add-cart">								
-					<h4><a href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/admin/locations">Gérer les locations</a></h4>
+					<h4><a href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/admin/commentaires">Gérer les commentaires</a></h4>
+					<div class="clear"></div>
+				</div>
+				<div class="clear"></div><div class="clear"></div>
+				<div class="clear"></div><hr><br />
+
+				<!-- Partie de gestion des utilisateurs (pointe vers une autre page) -->
+
+				<u>Gestion des utilisateurs</u> :<br /><br />
+				<div class="add-cart">								
+					<h4><a href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/admin/#">Gérer les utilisateurs</a></h4>
 					<div class="clear"></div>
 				</div>
 				

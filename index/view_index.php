@@ -33,6 +33,7 @@
 <div class="content_bottom">
 	<div class="wrap">
 		<div class="content-bottom-left">
+			<!-- Menu side (gauche) -->
 			<div class="categories">
 				<ul>
 					<h3>Toutes les catégories</h3>
@@ -51,7 +52,7 @@
 				<img src="content/images/computer.png" alt="" />
 				<div class="banner-desc">
 					<h4>Aide</h4>
-					<a href="#">More Info</a>
+					<a href="#">Cliquez ici</a>
 				</div>
 				<div class="clear"></div>
 			</div>
@@ -65,8 +66,10 @@
 			</div> -->
 		</div>
 
+		<!-- Contenu de droite -->
 		<div class="content-bottom-right">
 			<h3>Toutes les catégories</h3>
+			<!-- Boucle (à coder) des BOX de produits de TOUTES catégories (au random par ex...) -->
 			<div class="section group">
 				<div class="grid_1_of_4 images_1_of_4">
 					<h4><a href="preview.html">Whirlpool LTE5243D 3.4 CuFt.... </a></h4>
@@ -235,6 +238,7 @@
 					</div>
 				</div>
 			</div>
+			<!-- Partie d'articles divers (remplissages) -->
 			<div class="product-articles">
 				<h3>Toutes les catégories</h3>
 				<ul>

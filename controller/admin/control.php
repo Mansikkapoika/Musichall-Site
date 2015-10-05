@@ -31,7 +31,7 @@ class controleurAdmin {
 	}
 
 	public function afficheAdmin() {
-		$titre = 'Full thought';
+		$titre = 'Music Hall';
 		$position = 'Administration';
 
 		// Vérification admin (Affiche lien administration menu + permission d'accès page)
@@ -48,6 +48,7 @@ class controleurAdmin {
 			}
 		}
 
+		// Utilisation de l'accesseur pour les informations des catégories
 		$jeuenr = $this->get->getCat();
 
 	if (isset($_SESSION['username']))	// Si connecté

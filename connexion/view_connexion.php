@@ -1,11 +1,13 @@
 <?php ob_start(); ?>
 
+<!-- Vue de la page de connexion -->
 <div class="wrap">
 	<div class="preview-page">
 		<div class="contact-form">
 			<h3>Connexion</h3>
 			<div class="clear"></div>
 
+			<!-- Formulaire de connexion... -->
 			<form method="post" action="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/controller/connexion/formclick.php">
 				Pseudo :
 				<div>

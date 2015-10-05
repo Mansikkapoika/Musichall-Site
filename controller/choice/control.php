@@ -30,15 +30,14 @@ class controleurChoice {
 	}
 
 	public function afficheChoice() {
-		$titre = 'Categories';
+		$titre = 'Music Hall';
 		$position = '';
 
 		// Vérification admin
 		if (isset($_SESSION['username'])) {
 			$username = $this->user->echapVar($_SESSION['username']);
-			$reqAdmin = $this->user->getSecu(1, $username);
-			$reqAccess = $reqAdmin -> fetch_array();
-			if ($reqAccess['codeSecu'] == 3)
+			$reqAdmin = $this->user->getUser($username);
+			if ($reqAdmin['codeSecu'] == 3)
 			{
 				$access = true;
 			}
@@ -48,12 +47,29 @@ class controleurChoice {
 			}
 		}
 
+		// Utilisation de l'accesseur pour les informations des catégories
 		$getCat = $this->get->getCat();
 
-		if (isset($_GET['cat']) && is_numeric($_GET['cat'])) {
-			$getNomCategorie = $this->get->getCatSelect($_GET['cat']);
-			$getNomCategorie = $getNomCategorie->fetch_array();
+		if (isset($_GET['cat'])) {
+			$getCatSelect = $this->get->getCatSelect($_GET['cat']);
+			$getCatSelect = $getCatSelect->fetch_array();
 			$getSousCat = $this->get->getSousCat($_GET['cat']);
+			$artiveChoix = true;
+			if (isset($_GET['cat']) && isset($_GET['souscat']))
+			{
+				$artiveChoix = false;
+				$activeProduit = true;
+				$getMaterielSelect = $this->get->getMaterielSelect($_GET['souscat']);
+				$Material = true;
+			}
+			else
+			{
+				$Material = false;
+			}
+		}
+		else
+		{
+			header("Location: /Musichall/");
 		}
 
 	if (isset($_SESSION['username']))      // Si connecté

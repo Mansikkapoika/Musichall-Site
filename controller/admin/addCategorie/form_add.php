@@ -24,6 +24,7 @@ class ControleurAddCat {
 
 	public function AddCategorie($nom) {
 
+		// On échappe la variable pour les requêtes SQL et les injections
 		$nom = $this->admin->echapVar($nom);
 
 		// On vérifie si la catégorie n'existe pas déjà
@@ -34,10 +35,10 @@ class ControleurAddCat {
 		}
 		else
 		{
-			if ($this->admin->AddCat($nom))
+			if ($this->admin->AddCat($nom))			// Ajout de la catégorie
 			{
-				echo "Catégorie ajoutée. Redirection dans 5 secondes.";
-				header("refresh:5;url=/../");
+				echo "Catégorie ajoutée. Redirection dans 1 seconde.<br />";
+				header("refresh:1;url=/../");
 			}
 			else
 			{
@@ -49,6 +50,7 @@ class ControleurAddCat {
 
 	public function AddSousCategorie($nom,$categorieparent) {
 
+		// On échappe la variable pour les requêtes SQL et les injections
 		$nom = $this->admin->echapVar($nom);
 
 		// On vérifie si la sous catégorie n'existe pas déjà
@@ -61,8 +63,8 @@ class ControleurAddCat {
 		{
 			if ($this->admin->AddSousCat($nom,$categorieparent))		// Ajout de la sous catégorie
 			{
-				echo "Sous catégorie ajoutée.<br />";
-				header("refresh:5;url=/../");
+				echo "Sous catégorie ajoutée. Redirection dans 1 seconde.<br />";
+				header("refresh:1;url=/../");
 			}
 			else
 			{

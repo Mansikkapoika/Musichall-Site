@@ -1,5 +1,6 @@
 <?php ob_start(); ?>
 
+<!-- Vue de la page d'interdiction -->
 <div class="wrap">
 	<div class="preview-page">
 		<div class="contact-form">

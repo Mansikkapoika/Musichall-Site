@@ -1,11 +1,13 @@
 <?php ob_start(); ?>
 
+<!-- Vue de la page d'inscription -->
 <div class="wrap">
 	<div class="preview-page">
 		<div class="contact-form">
 			<h3>S'enregistrer</h3>
 			<div class="clear"></div>
 
+			<!-- Formulaire d'inscription... -->
 			<form method="post" action="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/controller/register/formclick.php">
 				Nom :
 				<div>
