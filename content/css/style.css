@@ -306,6 +306,52 @@ article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, s
 		color:#e44f2b;
 		padding-bottom:15px;
 	}
+	.error {
+	}
+	.error h3{
+		margin-top:5px;
+		font-size:1em;
+		color:#FFF;
+		padding:10px;
+		padding-left:25px;
+		background:#e44f2b;
+		position:relative;
+		margin-bottom:5px;
+	}
+	.error a{
+		background:#e44f2b !important;
+		padding:5px 15px !important;
+		display:inline-block !important;
+	}
+	.error a:hover{
+		background:#D03D1A !important;
+	}
+	.panier {
+		text-align: right;
+	}
+	.panier h3{
+		margin-top:5px;
+		font-size:1em;
+		color:#FFF;
+		padding:10px;
+		padding-left:25px;
+		background:#e44f2b;
+		position:relative;
+		margin-bottom:5px;
+	}
+	.panier a{
+		background:#e44f2b !important;
+		padding:5px 15px !important;
+		display:inline-block !important;
+		color: white;
+		border:1px solid white;
+	}
+	.panier a:hover{
+		background:#D03D1A !important;
+	}
+	.bloc {
+		margin-right: 60px;
+	}
 	.line{
 		display:block;
 		background:#EEE;

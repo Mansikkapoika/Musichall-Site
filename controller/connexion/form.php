@@ -25,16 +25,24 @@ class ControleurConnexion {
 		$password = $this->user->echapVar($password);
 
 		$try = $this->user->getUser($ech_username);
-		if($try['pseudo'] == $username && $try['password'] == md5($password)){
-			session_start();
-			$_SESSION['username'] = $ech_username;
-			header('Location:/../Musichall');
+		if (isset($username) && isset($password))
+		{
+			if($try['pseudo'] == $username && $try['password'] == md5($password)){
+				session_start();
+				$_SESSION['username'] = $ech_username;
+				$_SESSION['error'] = "Connexion réussie.";
+				header('Location:/Musichall/');
+			}
+			else
+			{
+				$_SESSION['error'] = "Login ou mot de passe incorrect.";
+				header('Location:/Musichall/connexion');
+			}
 		}
 		else
 		{
-			$nom = $try['pseudo'];
-			$blabla = md5($password);
-			die("Login ou mot de passe incorrect.");
+			$_SESSION['error'] = "Un des champs n'a pas été rempli.";
+			header('Location:/Musichall/connexion');
 		}
 
 	}

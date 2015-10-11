@@ -24,7 +24,7 @@ class controleurConnexion {
 	}
 
 	public function afficheConnexion() {
-		$titre = 'Full thought';
+		$titre = 'Music Hall';
 		$position = 'Connexion';
 
 		// Vérification admin

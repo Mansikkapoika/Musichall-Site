@@ -31,18 +31,20 @@ class ControleurAddCat {
 		$verif = $this->admin->VerifCat($nom);
 		if ($verif >1)
 		{
-			echo "La catégorie existe déjà.";
+			$_SESSION['error'] = "La catégorie existe déjà.";
+			header('Location:/Musichall/admin');
 		}
 		else
 		{
 			if ($this->admin->AddCat($nom))			// Ajout de la catégorie
 			{
-				echo "Catégorie ajoutée. Redirection dans 1 seconde.<br />";
-				header("refresh:1;url=/../");
+				$_SESSION['error'] = "Catégorie ajoutée.";
+				header('Location:/Musichall/admin');
 			}
 			else
 			{
-				echo "Erreur : Catégorie non ajoutée.";
+				$_SESSION['error'] = "Catégorie non ajoutée.";
+				header('Location:/Musichall/admin');
 			}
 		}
 
@@ -57,18 +59,20 @@ class ControleurAddCat {
 		$verif = $this->admin->VerifSousCat($nom);
 		if ($verif >1)
 		{
-			echo "La sous catégorie existe déjà.";
+			$_SESSION['error'] = "La sous catégorie existe déjà.";
+			header('Location:/Musichall/admin');
 		}
 		else
 		{
 			if ($this->admin->AddSousCat($nom,$categorieparent))		// Ajout de la sous catégorie
 			{
-				echo "Sous catégorie ajoutée. Redirection dans 1 seconde.<br />";
-				header("refresh:1;url=/../");
+				$_SESSION['error'] = "Sous catégorie ajoutée.";
+				header('Location:/Musichall/admin');
 			}
 			else
 			{
-				echo "Sous catégorie non ajoutée. $nom et $categorieparent";
+				$_SESSION['error'] = "Sous catégorie non ajoutée.";
+				header('Location:/Musichall/admin');
 			}
 		}
 

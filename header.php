@@ -63,6 +63,7 @@
 			<span class="left-ribbon"> </span> 
 			<span class="right-ribbon"> </span>    
 		</div>
+		<!--
 		<div class="header_bottom">
 			<div class="slider-text">
 				<h2>Les promos sont là ! <br/></h2>
@@ -73,6 +74,6 @@
 				<img src="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/content/images/slider-img.png" alt="" />
 			</div>
 			<div class="clear"></div>
-		</div>
+		</div> -->
 	</div>
 </div>

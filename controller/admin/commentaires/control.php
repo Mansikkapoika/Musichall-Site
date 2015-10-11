@@ -35,7 +35,7 @@ class controleurCommentaires {
 	}
 
 	public function afficheCommentaires() {
-		$titre = 'Full thought';
+		$titre = 'Music Hall';
 		$position = 'Gestion commentaires';
 
 		// Vérification admin (Menu lien administration)

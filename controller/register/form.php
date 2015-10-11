@@ -34,17 +34,21 @@ class ControleurRegister {
 			if ($username != $try['pseudo'])		// S'il n'existe pas déjà dans la DB
 			{
 				$this->user->addUser($nom,$prenom,$username,$email,md5($password),$newsletter);
-				header('Location: /../');
+				$_SESSION['error'] = "Inscription réussie. Vous pouvez vous connecter.";
+				header('Location: /Musichall');
 			}
 			else
 			{
 				$upperName = mb_strtoupper($username, 'UTF-8');
-				echo "Le login $upperName est déjà utilisé.";
+				// echo "Le login $upperName est déjà utilisé.";
+				$_SESSION['error'] = "Le login $upperName est déjà utilisé.";
+				header('Location: /Musichall/register');
 			}
 		}
 		else
 		{
-			echo "Les mots de passes ne sont pas identiques.";
+			$_SESSION['error'] = "Les mots de passes ne sont pas identiques.";
+			header('Location: /Musichall/register');
 		}
 
 	}

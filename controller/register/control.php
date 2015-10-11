@@ -30,7 +30,7 @@ class controleurRegister {
 	}
 
 	public function afficheRegister() {
-		$titre = 'Full thought';
+		$titre = 'Music Hall';
 		$position = 'Inscription';
 
 		// Vérification admin

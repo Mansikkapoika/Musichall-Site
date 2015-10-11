@@ -1,61 +1,68 @@
 ﻿<?php ob_start(); ?>
+<?php if(isset($_SESSION['error']))
+{ ?>
+	<div class="error"><h3>
+		<i class="fa fa-info"></i> 
+		<?= $_SESSION['error']; ?>
+	</h3></div>
+	<?php } ?>
 
-<div class="content_top">
-	<div class="wrap">
-		<h3>Derniers produits</h3>
+	<div class="content_top">
+		<div class="wrap">
+			<h3>Derniers produits</h3>
+		</div>
+		<div class="line"></div>
+		<div class="wrap">
+			<div class="ocarousel_slider">  
+				<div class="ocarousel example_photos" data-ocarousel-perscroll="3">
+					<div class="ocarousel_window">
+						<a href="#" title="img1"> <img src="content/images/latest-product-img1.jpg" alt="" /><p>Nuncvitae</p></a>
+						<a href="#" title="img2"> <img src="content/images/latest-product-img2.jpg" alt="" /><p>Suspendiss</p></a>
+						<a href="#" title="img3"> <img src="content/images/latest-product-img3.jpg" alt="" /><p>Phasellus ferm</p></a>
+						<a href="#" title="img4"> <img src="content/images/latest-product-img4.jpg" alt="" /><p>Veldignissim</p></a>
+						<a href="#" title="img5"> <img src="content/images/latest-product-img5.jpg" alt="" /><p>Aliquam interd</p></a>
+						<a href="#" title="img6"> <img src="content/images/latest-product-img6.jpg" alt="" /><p>Sapien lectus</p></a>
+						<a href="#" title="img1"> <img src="content/images/latest-product-img1.jpg" alt="" /><p>Nuncvitae</p></a>
+						<a href="#" title="img2"> <img src="content/images/latest-product-img2.jpg" alt="" /><p>Suspendiss</p></a>
+						<a href="#" title="img3"> <img src="content/images/latest-product-img3.jpg" alt="" /><p>Phasellus ferm</p></a>
+						<a href="#" title="img4"> <img src="content/images/latest-product-img4.jpg" alt="" /><p>Veldignissim</p></a>
+						<a href="#" title="img5"> <img src="content/images/latest-product-img5.jpg" alt="" /><p>Aliquam interd</p></a>
+						<a href="#" title="img6"> <img src="content/images/latest-product-img6.jpg" alt="" /><p>Sapien lectus</p></a>
+					</div>
+					<span>           
+						<a href="#" data-ocarousel-link="left" style="float: left;" class="prev"> </a>
+						<a href="#" data-ocarousel-link="right" style="float: right;" class="next"> </a>
+					</span>
+				</div>
+			</div>  
+		</div>    		
 	</div>
-	<div class="line"> </div>
-	<div class="wrap">
-		<div class="ocarousel_slider">  
-			<div class="ocarousel example_photos" data-ocarousel-perscroll="3">
-				<div class="ocarousel_window">
-					<a href="#" title="img1"> <img src="content/images/latest-product-img1.jpg" alt="" /><p>Nuncvitae</p></a>
-					<a href="#" title="img2"> <img src="content/images/latest-product-img2.jpg" alt="" /><p>Suspendiss</p></a>
-					<a href="#" title="img3"> <img src="content/images/latest-product-img3.jpg" alt="" /><p>Phasellus ferm</p></a>
-					<a href="#" title="img4"> <img src="content/images/latest-product-img4.jpg" alt="" /><p>Veldignissim</p></a>
-					<a href="#" title="img5"> <img src="content/images/latest-product-img5.jpg" alt="" /><p>Aliquam interd</p></a>
-					<a href="#" title="img6"> <img src="content/images/latest-product-img6.jpg" alt="" /><p>Sapien lectus</p></a>
-					<a href="#" title="img1"> <img src="content/images/latest-product-img1.jpg" alt="" /><p>Nuncvitae</p></a>
-					<a href="#" title="img2"> <img src="content/images/latest-product-img2.jpg" alt="" /><p>Suspendiss</p></a>
-					<a href="#" title="img3"> <img src="content/images/latest-product-img3.jpg" alt="" /><p>Phasellus ferm</p></a>
-					<a href="#" title="img4"> <img src="content/images/latest-product-img4.jpg" alt="" /><p>Veldignissim</p></a>
-					<a href="#" title="img5"> <img src="content/images/latest-product-img5.jpg" alt="" /><p>Aliquam interd</p></a>
-					<a href="#" title="img6"> <img src="content/images/latest-product-img6.jpg" alt="" /><p>Sapien lectus</p></a>
+	<div class="content_bottom">
+		<div class="wrap">
+			<div class="content-bottom-left">
+				<!-- Menu side (gauche) -->
+				<div class="categories">
+					<ul>
+						<h3>Toutes les catégories</h3>
+						<?php while ($item = $getCat->fetch_array()) { ?>
+						<li><a href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/choice/?cat=<?php echo $item ['idCategorie']; ?>"><?php echo $item['libelle']; ?></a></li>
+						<?php } ?>
+						<li><a href="#">Promotions</a></li>
+					</ul>
+				</div>		
+				<div class="buters-guide">
+					<h3>Guides d'achats</h3>
+					<p><span>Ne vous trompez plus !</span></p>	
+					<p>Parcourez la page d'aide pour trouver les réponses à toutes vos questions. </p>
+				</div>	
+				<div class="add-banner">
+					<img src="content/images/computer.png" alt="" />
+					<div class="banner-desc">
+						<h4>Aide</h4>
+						<a href="#">Cliquez ici</a>
+					</div>
+					<div class="clear"></div>
 				</div>
-				<span>           
-					<a href="#" data-ocarousel-link="left" style="float: left;" class="prev"> </a>
-					<a href="#" data-ocarousel-link="right" style="float: right;" class="next"> </a>
-				</span>
-			</div>
-		</div>  
-	</div>    		
-</div>
-<div class="content_bottom">
-	<div class="wrap">
-		<div class="content-bottom-left">
-			<!-- Menu side (gauche) -->
-			<div class="categories">
-				<ul>
-					<h3>Toutes les catégories</h3>
-					<?php while ($item = $getCat->fetch_array()) { ?>
-					<li><a href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/choice/?cat=<?php echo $item ['idCategorie']; ?>"><?php echo $item['libelle']; ?></a></li>
-					<?php } ?>
-					<li><a href="#">Promotions</a></li>
-				</ul>
-			</div>		
-			<div class="buters-guide">
-				<h3>Guides d'achats</h3>
-				<p><span>Ne vous trompez plus !</span></p>	
-				<p>Parcourez la page d'aide pour trouver les réponses à toutes vos questions. </p>
-			</div>	
-			<div class="add-banner">
-				<img src="content/images/computer.png" alt="" />
-				<div class="banner-desc">
-					<h4>Aide</h4>
-					<a href="#">Cliquez ici</a>
-				</div>
-				<div class="clear"></div>
-			</div>
 			<!-- <div class="add-banner add-banner2">
 				<img src="content/images/computer.png" alt="" />
 				<div class="banner-desc">
@@ -263,4 +270,10 @@
 	</div>
 </div>
 
-<?php $contenu = ob_get_clean(); ?>
+<?php
+$contenu = ob_get_clean(); 
+if(isset($_SESSION['error']))
+{
+	unset($_SESSION['error']);
+}
+?>

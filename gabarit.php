@@ -10,6 +10,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<link href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/content/css/style.css" rel="stylesheet" type="text/css" media="all"/>
 	<script type="text/javascript" src="content/js/jquery-1.9.0.min.js"></script> 
 	<script src="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/content/js/jquery.openCarousel.js" type="text/javascript"></script>
@@ -22,6 +23,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<!------------End Header ------------>
 	<div class="main">
 		<div class="content">
+			<!-- Barre du panier -->
+			
+			<div class="panier"><h3><div class="bloc"><i class="fa fa-shopping-cart"></i> Panier : 0 articles <a href="#">Voir</a></div></h3></div>
+			<div class="line"></div>
+			
+			<!-- Barre du panier -->
 			<?= $contenu; ?>
 		</div>
 	</div>
