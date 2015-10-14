@@ -38,4 +38,9 @@ class Get extends Model {
 		return $this->getBdd()->query("SELECT * FROM materiel WHERE idSousCategorie='$id'");
 	}
 
+	public function getInfoMateriel($idSouscat,$idMat)
+	{
+		return $this->getBdd()->query("SELECT * FROM materiel WHERE idMateriel = '$idMat' AND idSousCategorie='$idSouscat'");
+	}
+
 }

@@ -1,6 +1,6 @@
 ﻿<?php
 
-class controleurChoice {
+class controleurProduct {
 
 	private $Dir;
 	private $user;
@@ -29,7 +29,7 @@ class controleurChoice {
 		$this->get = new Get();
 	}
 
-	public function afficheChoice() {
+	public function afficheProduct() {
 		$titre = 'Music Hall';
 		$position = '';
 
@@ -47,54 +47,34 @@ class controleurChoice {
 			}
 		}
 
-		// Utilisation de l'accesseur pour les informations des catégories
-		$getCat = $this->get->getCat();
-
 		// Obligé de faire un test, car si aucune action est entrée, la variable GET n'existe pas, une erreur s'affiche sans rediriger l'utilisateur
-		if (isset($_GET['cat']))
+		if (isset($_GET['souscat']) && isset($_GET['mat']))
 		{
-					// Echappement de la variable GET contre les injections SQL
-			$cat = $this->user->echapVar($_GET['cat']);
+			// Echappement de la variable GET contre les injections SQL
+			$souscat = $this->user->echapVar($_GET['souscat']);
+			$mat = $this->user->echapVar($_GET['mat']);
 		}
 
-		if (isset($cat)) {
-			$getCatSelect = $this->get->getCatSelect($cat);
-			$getCatSelect = $getCatSelect->fetch_array();
-			$getSousCat = $this->get->getSousCat($cat);
-			$artiveChoix = true;
-
-			if (isset($_GET['souscat']))
-			{
-				// Echappement de la variable GET contre les injections SQL
-				$souscat = $this->user->echapVar($_GET['souscat']);
-			}
-			
-			if (isset($cat) && isset($souscat))
-			{
-				$artiveChoix = false;
-				$activeProduit = true;
-				$getMaterielSelect = $this->get->getMaterielSelect($souscat);
-				$Material = true;
-				$idSousCat = $_GET['souscat'];
-			}
-			else
-			{
-				$Material = false;
-			}
+		$getMat = $this->get->getInfoMateriel($souscat,$mat);
+		if (isset($souscat) && isset($mat) && $getMat = $getMat->fetch_assoc())
+		{
+			// Infos sur le matériel
 		}
 		else
 		{
+			$_SESSION['error'] = "Le produit n'existe pas.";
 			header("Location: /Musichall/");
 		}
 
+
 	if (isset($_SESSION['username']))      // Si connecté
 	{
-		require_once $this->Dir.'choice/view_choice.php';
+		require_once $this->Dir.'product/view_product.php';
 		require_once $this->Dir.'gabarit.php';
 	}
 	else
 	{
-		require_once $this->Dir.'choice/view_choice.php';
+		require_once $this->Dir.'product/view_product.php';
 		require_once $this->Dir.'gabarit.php';
 	}
 

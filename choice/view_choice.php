@@ -55,31 +55,43 @@
 				<h3>Toutes les sous-catégories - <?php echo $getCatSelect['libelle']; ?></h3>
 				<?php
 			}
-			else
+			else 		// Sinon, si on a une deuxième action (les sous catégories) : Afficher les produits
 			{ 
 				$getSousCat = $getSousCat->fetch_array(); ?>
 				<div class="content-bottom-right">
 					<!-- Ouverture de l'encadré adapté à la boucle d'affichage des PRODUITS des sous-catégories -->
-					<h3>Tous les produits - <?php echo $getSousCat['libelle']; ?></h3>
+					<h3>Tous les produits - <?php echo $getCatSelect['libelle']." :: ".$getSousCat['libelle']; ?></h3>
 					<div class="section group">
 						<!-- Boucle d'affichage des BOX des PRODUITS des sous-catégories -->
-						<?php while ($itemMateriel = $getMaterielSelect->fetch_array()) { ?>
+						<?php 
+						if ($getMaterielSelect->num_rows <= 0)
+						{
+							?>
+							<br />
+							<i class="fa fa-info"></i> Il n'y a aucuns produits dans cette catégorie.
+							<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+							<?php
+						}
+						while ($itemMateriel = $getMaterielSelect->fetch_array()) { ?>
 						<div class="grid_1_of_4 images_1_of_4">
-							<h4><a href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/choice/?cat=<?php echo $itemMateriel['idMateriel']; ?>&souscat=<?php echo $itemMateriel['idMateriel']; ?>"><?php echo $itemMateriel['libelle']; ?></a></h4>
-							<a href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/choice/?cat=<?php echo $itemMateriel['idMateriel']; ?>&souscat=<?php echo $itemMateriel['idMateriel']; ?>"><img src="../content/images/product-img1.jpg" alt="" /></a>
+							<h4><a href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/product/?souscat=<?php echo $idSousCat; ?>&mat=<?php echo $itemMateriel['idMateriel']; ?>"><?php echo $itemMateriel['libelle']; ?></a></h4>
+							<a href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/product/?souscat=<?php echo $idSousCat; ?>&mat=<?php echo $itemMateriel['idMateriel']; ?>"><img src="../content/images/product-img1.jpg" alt="" /></a>
 							<div class="price-details">
 								<div class="add-cart">								
-									<h4><a href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/choice/?cat=<?php echo $itemMateriel['idMateriel']; ?>&souscat=<?php echo $itemMateriel['idMateriel']; ?>">Voir le produit</a></h4>
+									<h4><a href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/product/?souscat=<?php echo $idSousCat; ?>&mat=<?php echo $itemMateriel['idMateriel']; ?>">Voir le produit</a></h4>
 								</div>
 								<div class="clear"></div>
 							</div>					 
 						</div>
-						<?php } ?>
+						<?php } 
+
+						?>
+
 					</div>
 					<!-- Fermeture de l'encadré adapté à la boucle d'affichage des PRODUITS des sous-catégories -->
 					<div class="product-articles">
-						<h3>Tous les produits - <?php echo $getSousCat['libelle']; ?></h3>
-						<?php
+						<h3>Tous les produits - <?php echo $getCatSelect['libelle']." :: ".$getSousCat['libelle']; ?></h3>
+						<?php	
 					}
 					?>
 

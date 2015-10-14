@@ -12,10 +12,41 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<link href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/content/css/style.css" rel="stylesheet" type="text/css" media="all"/>
-	<script type="text/javascript" src="content/js/jquery-1.9.0.min.js"></script> 
-	<script src="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/content/js/jquery.openCarousel.js" type="text/javascript"></script>
+	<script type="text/javascript" src="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/content/js/jquery-1.9.0.min.js"></script> 
+	<script type="text/javascript" src="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/content/js/jquery.openCarousel.js"></script>
 	<script type="text/javascript" src="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/content/js/easing.js"></script>
 	<script type="text/javascript" src="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/content/js/move-top.js"></script>
+	<!-- CSS et JS de la page d'affichage des produits -->
+	<script src="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/content/js/easyResponsiveTabs.js" type="text/javascript"></script>
+	<link href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/content/css/easy-responsive-tabs.css" rel="stylesheet" type="text/css" media="all"/>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('#horizontalTab').easyResponsiveTabs({
+            type: 'default', //Types: default, vertical, accordion           
+            width: 'auto', //auto or any width like 600px
+            fit: true   // 100% fit in a container
+        });
+		});
+	</script>		
+	<link rel="stylesheet" href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/content/css/etalage.css">
+	<script src="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/content/js/jquery.etalage.min.js"></script>
+	<script>
+		jQuery(document).ready(function($){
+
+			$('#etalage').etalage({
+				thumb_image_width: 300,
+				thumb_image_height: 400,
+				source_image_width: 900,
+				source_image_height: 1200,
+				show_hint: true,
+				click_callback: function(image_anchor, instance_id){
+					alert('Callback example:\nYou clicked on an image with the anchor: "'+image_anchor+'"\n(in Etalage instance: "'+instance_id+'")');
+				}
+			});
+
+		});
+	</script>
+	<script src="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/content/js/star-rating.js" type="text/javascript"></script>
 </head>
 <body>
 	<!-- START Header -->
