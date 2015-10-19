@@ -10,7 +10,9 @@
 					<li><?= $getMat['libelle']; ?></li>
 					<div class="clear"> </div>
 				</ul>
-				<div class="product-details">	
+				<!-- Page d'affichage d'un produit -->
+				<div class="product-details">
+					<!-- Images du produit -->
 					<div class="grid images_3_of_2">
 						<ul id="etalage">
 							<li>
@@ -33,13 +35,14 @@
 							</li>
 						</ul>
 					</div>
+					<!-- Informations sur le produit -->
 					<div class="desc span_3_of_2">
 						<h2><?= $getMat['libelle']; ?></h2>
 						<p><?= $getMat['description']; ?></p>					
 						<div class="price">
 							<p>Prix: <span><?= $getMat['prixAchHT']; ?>€</span></p>
-							<!-- S'il y a un prix de location -->
-							<?php if (isset($prixLoca)) {?><p>Prix: <span><?= $getMat['prixAchHT']; ?>€</span></p> <?php } else {} ?>
+							<!-- S'il y a un prix de location, on l'affiche -->
+							<?php if (isset($prixLoca)) {?><p>Prix de location: <span><?= $getMat['prixAchHT']; ?>€</span></p> <?php } else {} ?>
 							</div>
 							<div class="available">
 								<ul>
@@ -49,10 +52,15 @@
 								</ul>
 							</div>
 							<div class="share-desc">
-								<div class="share">
-									<p>Nombre d'unités :</p><input type="number" class="text_box" type="text" value="1" min="1" />				
-								</div>
-								<div class="button"><span><a href="#">Ajouter au panier</a></span></div>					
+								<!-- Début formulaire (passage de la ref et de la quantité) -->
+								<form method="post" action="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/controller/panier/formclick.php">
+									<div class="share">
+										<p>Nombre d'unités :</p><input type="number" class="text_box" type="text" name="quantite" value="1" min="1" max="50" />				
+									</div>
+									<!-- Référence ici pour la passer dans le controleur du formulaire -->
+									<input type="hidden" name="reference" value="<?= $getMat['idMateriel']; ?>" />
+									<div class="input"><input type="submit" value="Ajouter au panier"></div>
+								</form>			
 								<div class="clear"></div>
 							</div>
 							<div class="wish-list">

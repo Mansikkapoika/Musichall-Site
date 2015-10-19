@@ -28,9 +28,6 @@
 					<a href="#">Informations</a>
 				</li>
 				<li>
-					<a href="#">Boutique</a>
-				</li>
-				<li>
 					<a href="#">Nouveautés</a>
 				</li>
 				<?php   if (!isset($_SESSION['username'])) { ?>

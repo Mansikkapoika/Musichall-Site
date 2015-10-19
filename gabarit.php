@@ -1,9 +1,3 @@
-<!--A Design by W3layouts
-Author: W3layout
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
 <!DOCTYPE HTML>
 <head>
 	<title><?php echo $titre; ?></title>
@@ -55,10 +49,16 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<div class="main">
 		<div class="content">
 			<!-- Barre du panier -->
-			
-			<div class="panier"><h3><div class="bloc"><i class="fa fa-shopping-cart"></i> Panier : 0 articles <a href="#">Voir</a></div></h3></div>
+			<?php
+			if (!isset($_SESSION['Panier']))
+				{ ?>
+			<div class="panier"><h3><div class="bloc"><i class="fa fa-shopping-cart"></i> Panier : 0 articles</div></h3></div>
+			<?php }
+			else
+				{ ?>
+			<div class="panier"><h3><div class="bloc"><i class="fa fa-shopping-cart"></i> Panier : <?php echo $_SESSION['Panier']->getNbProd(); ?> article(s) <a href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/panier">Voir</a></div></h3></div>
+			<?php } ?>
 			<div class="line"></div>
-			
 			<!-- Barre du panier -->
 			<?= $contenu; ?>
 		</div>
