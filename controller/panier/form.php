@@ -34,10 +34,10 @@ class ControleurPanier {
 		{
 			$_SESSION['Panier'] = new Panier();
 		}
+		
    		// On crée un produit et on l'ajoute au panier
 		$prod = new Produit($ref);
 		$_SESSION['Panier']->ajouterUnProduit($prod);
-
 
 		echo "<SCRIPT LANGUAGE='JavaScript' TYPE='text/javascript'>  
 		alert('Votre produit ".$prod->getRef()." a été ajouté au panier');

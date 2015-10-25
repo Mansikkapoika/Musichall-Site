@@ -82,6 +82,9 @@ class controleurPanier {
 			}
 		}
 
+		// Récupération des informations du panier
+		$Coll = $_SESSION['Panier']->getProduitsPanier(); 
+
 	if (isset($_SESSION['username']))	// Si connecté
 	{
 		require_once $this->Dir.'panier/view_panier.php';

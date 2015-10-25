@@ -1,5 +1,22 @@
 ﻿<?php
 
+// Connexion à la base de données en PDO
+function BDDConnexionPDO()
+{
+	$PARAM_hote='localhost'; 	$PARAM_port='3306';
+	$PARAM_nom_bd='musichall'; 	$PARAM_utilisateur='root'; 
+	$PARAM_mot_passe='mangos'; 
+	try
+	{      $connexion = new PDO('mysql:host='.$PARAM_hote.'; dbname='.$PARAM_nom_bd, $PARAM_utilisateur, $PARAM_mot_passe);
+}
+catch(Exception $e)
+{     echo 'Erreur : '.$e->getMessage().'<br />';
+echo 'N° : '.$e->getCode();
+die;
+} 
+return $connexion;
+} 
+
 class Model
 {
 
@@ -24,4 +41,4 @@ class Model
 		}
 	}
 
-    }
+}

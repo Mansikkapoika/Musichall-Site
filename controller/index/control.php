@@ -13,9 +13,12 @@ class controleurAccueil {
 			$this->Dir = getcwd().'/';
 			require_once getcwd().'/model/get.php';
 			require_once getcwd().'/model/user.php';
+			require_once getcwd().'/Class/panier.class.php';
 		}
 		$this->get = new Get();
 		$this->user = new User();
+
+		session_start();
 	}
 
 	public function afficheAccueil() {
