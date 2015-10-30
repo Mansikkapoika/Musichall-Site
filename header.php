@@ -7,7 +7,7 @@
 			</div>
 			<div class="header_top_right">
 				<div class="search_box">
-					<span>Search</span>
+					<span>Recherche</span>
 					<form>
 						<input type="text" value=""><input type="submit" value="">
 					</form>

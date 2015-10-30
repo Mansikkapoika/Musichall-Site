@@ -16,18 +16,18 @@
 			<div class="ocarousel_slider">  
 				<div class="ocarousel example_photos" data-ocarousel-perscroll="3">
 					<div class="ocarousel_window">
-						<a href="#" title="img1"> <img src="content/images/latest-product-img1.jpg" alt="" /><p>Nuncvitae</p></a>
-						<a href="#" title="img2"> <img src="content/images/latest-product-img2.jpg" alt="" /><p>Suspendiss</p></a>
-						<a href="#" title="img3"> <img src="content/images/latest-product-img3.jpg" alt="" /><p>Phasellus ferm</p></a>
-						<a href="#" title="img4"> <img src="content/images/latest-product-img4.jpg" alt="" /><p>Veldignissim</p></a>
-						<a href="#" title="img5"> <img src="content/images/latest-product-img5.jpg" alt="" /><p>Aliquam interd</p></a>
-						<a href="#" title="img6"> <img src="content/images/latest-product-img6.jpg" alt="" /><p>Sapien lectus</p></a>
-						<a href="#" title="img1"> <img src="content/images/latest-product-img1.jpg" alt="" /><p>Nuncvitae</p></a>
-						<a href="#" title="img2"> <img src="content/images/latest-product-img2.jpg" alt="" /><p>Suspendiss</p></a>
-						<a href="#" title="img3"> <img src="content/images/latest-product-img3.jpg" alt="" /><p>Phasellus ferm</p></a>
-						<a href="#" title="img4"> <img src="content/images/latest-product-img4.jpg" alt="" /><p>Veldignissim</p></a>
-						<a href="#" title="img5"> <img src="content/images/latest-product-img5.jpg" alt="" /><p>Aliquam interd</p></a>
-						<a href="#" title="img6"> <img src="content/images/latest-product-img6.jpg" alt="" /><p>Sapien lectus</p></a>
+						<a href="#" title="img1"> <img src="content/images/latest-product-img1.jpg" alt="" /><p>Produit test 1</p></a>
+						<a href="#" title="img2"> <img src="content/images/latest-product-img2.jpg" alt="" /><p>Produit test 2</p></a>
+						<a href="#" title="img3"> <img src="content/images/latest-product-img3.jpg" alt="" /><p>Produit test 3</p></a>
+						<a href="#" title="img4"> <img src="content/images/latest-product-img4.jpg" alt="" /><p>Produit test 4</p></a>
+						<a href="#" title="img5"> <img src="content/images/latest-product-img5.jpg" alt="" /><p>Produit test 5</p></a>
+						<a href="#" title="img6"> <img src="content/images/latest-product-img6.jpg" alt="" /><p>Produit test 6</p></a>
+						<a href="#" title="img1"> <img src="content/images/latest-product-img1.jpg" alt="" /><p>Produit test 7</p></a>
+						<a href="#" title="img2"> <img src="content/images/latest-product-img2.jpg" alt="" /><p>Produit test 8</p></a>
+						<a href="#" title="img3"> <img src="content/images/latest-product-img3.jpg" alt="" /><p>Produit test 9</p></a>
+						<a href="#" title="img4"> <img src="content/images/latest-product-img4.jpg" alt="" /><p>Produit test 10</p></a>
+						<a href="#" title="img5"> <img src="content/images/latest-product-img5.jpg" alt="" /><p>Produit test 11</p></a>
+						<a href="#" title="img6"> <img src="content/images/latest-product-img6.jpg" alt="" /><p>Produit test 12</p></a>
 					</div>
 					<span>           
 						<a href="#" data-ocarousel-link="left" style="float: left;" class="prev"> </a>
@@ -79,7 +79,7 @@
 			<!-- Boucle (à coder) des BOX de produits de TOUTES catégories (au random par ex...) -->
 			<div class="section group">
 				<div class="grid_1_of_4 images_1_of_4">
-					<h4><a href="preview.html">Whirlpool LTE5243D 3.4 CuFt.... </a></h4>
+					<h4><a href="preview.html">Produit aléatoire test </a></h4>
 					<a href="preview.html"><img src="content/images/product-img1.jpg" alt="" /></a>
 					<div class="price-details">
 						<div class="price-number">
@@ -92,7 +92,7 @@
 					</div>					 
 				</div>
 				<div class="grid_1_of_4 images_1_of_4">
-					<h4><a href="preview.html">Whirlpool LTE5243D 3.4 CuFt.... </a></h4>
+					<h4><a href="preview.html">Produit aléatoire test </a></h4>
 					<a href="preview.html"><img src="content/images/product-img2.jpg" alt="" /></a>
 					<div class="price-details">
 						<div class="price-number">
@@ -106,7 +106,7 @@
 
 				</div>
 				<div class="grid_1_of_4 images_1_of_4">
-					<h4><a href="preview.html">Whirlpool LTE5243D 3.4 CuFt.... </a></h4>
+					<h4><a href="preview.html">Produit aléatoire test </a></h4>
 					<a href="preview.html"><img src="content/images/product-img3.jpg" alt="" /></a>
 					<div class="price-details">
 						<div class="price-number">
@@ -120,7 +120,7 @@
 
 				</div>
 				<div class="grid_1_of_4 images_1_of_4">
-					<h4><a href="preview.html">Whirlpool LTE5243D 3.4 CuFt.... </a></h4>
+					<h4><a href="preview.html">Produit aléatoire test </a></h4>
 					<a href="preview.html"><img src="content/images/product-img4.jpg" alt="" /></a>
 					<div class="price-details">
 						<div class="price-number">
@@ -135,7 +135,7 @@
 			</div>
 			<div class="section group">
 				<div class="grid_1_of_4 images_1_of_4">
-					<h4><a href="preview.html">Whirlpool LTE5243D 3.4 CuFt.... </a></h4>
+					<h4><a href="preview.html">Produit aléatoire test </a></h4>
 					<a href="preview.html"><img src="content/images/product-img1.jpg" alt="" /></a>
 					<div class="price-details">
 						<div class="price-number">
@@ -148,7 +148,7 @@
 					</div>					 
 				</div>
 				<div class="grid_1_of_4 images_1_of_4">
-					<h4><a href="preview.html">Whirlpool LTE5243D 3.4 CuFt.... </a></h4>
+					<h4><a href="preview.html">Produit aléatoire test </a></h4>
 					<a href="preview.html"><img src="content/images/product-img2.jpg" alt="" /></a>
 					<div class="price-details">
 						<div class="price-number">
@@ -162,7 +162,7 @@
 
 				</div>
 				<div class="grid_1_of_4 images_1_of_4">
-					<h4><a href="preview.html">Whirlpool LTE5243D 3.4 CuFt.... </a></h4>
+					<h4><a href="preview.html">Produit aléatoire test </a></h4>
 					<a href="preview.html"><img src="content/images/product-img3.jpg" alt="" /></a>
 					<div class="price-details">
 						<div class="price-number">
@@ -176,7 +176,7 @@
 
 				</div>
 				<div class="grid_1_of_4 images_1_of_4">
-					<h4><a href="preview.html">Whirlpool LTE5243D 3.4 CuFt.... </a></h4>
+					<h4><a href="preview.html">Produit aléatoire test </a></h4>
 					<a href="preview.html"><img src="content/images/product-img4.jpg" alt="" /></a>
 					<div class="price-details">
 						<div class="price-number">
@@ -191,7 +191,7 @@
 			</div>
 			<div class="section group">
 				<div class="grid_1_of_4 images_1_of_4">
-					<h4><a href="preview.html">Whirlpool LTE5243D 3.4 CuFt.... </a></h4>
+					<h4><a href="preview.html">Produit aléatoire test </a></h4>
 					<a href="preview.html"><img src="content/images/product-img1.jpg" alt="" /></a>
 					<div class="price-details">
 						<div class="price-number">
@@ -204,7 +204,7 @@
 					</div>					 
 				</div>
 				<div class="grid_1_of_4 images_1_of_4">
-					<h4><a href="preview.html">Whirlpool LTE5243D 3.4 CuFt.... </a></h4>
+					<h4><a href="preview.html">Produit aléatoire test </a></h4>
 					<a href="preview.html"><img src="content/images/product-img2.jpg" alt="" /></a>
 					<div class="price-details">
 						<div class="price-number">
@@ -218,7 +218,7 @@
 
 				</div>
 				<div class="grid_1_of_4 images_1_of_4">
-					<h4><a href="preview.html">Whirlpool LTE5243D 3.4 CuFt.... </a></h4>
+					<h4><a href="preview.html">Produit aléatoire test </a></h4>
 					<a href="preview.html"><img src="content/images/product-img3.jpg" alt="" /></a>
 					<div class="price-details">
 						<div class="price-number">
@@ -232,7 +232,7 @@
 
 				</div>
 				<div class="grid_1_of_4 images_1_of_4">
-					<h4><a href="preview.html">Whirlpool LTE5243D 3.4 CuFt.... </a></h4>
+					<h4><a href="preview.html">Produit aléatoire test </a></h4>
 					<a href="preview.html"><img src="content/images/product-img4.jpg" alt="" /></a>
 					<div class="price-details">
 						<div class="price-number">

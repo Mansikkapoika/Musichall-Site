@@ -155,7 +155,7 @@
 					<h3>Produits similaires</h3>
 					<ul class="popular-products">
 						<li>
-							<h4><a href="preview.html">Whirlpool LTE5243D 3.4 CuFt.... </a></h4>
+							<h4><a href="preview.html">Produit similaire test </a></h4>
 							<a href="preview.html"><img src="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/content/images/product-img2.jpg" alt="" /></a>
 							<div class="price-details">
 								<div class="price-number">
@@ -168,7 +168,7 @@
 							</div>					 
 						</li>
 						<li>
-							<h4><a href="preview.html">Whirlpool LTE5243D 3.4 CuFt.... </a></h4>
+							<h4><a href="preview.html">Produit similaire test </a></h4>
 							<a href="preview.html"><img src="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/content/images/product-img3.jpg" alt="" /></a>
 							<div class="price-details">
 								<div class="price-number">
@@ -181,7 +181,7 @@
 							</div>					 
 						</li>
 						<li>
-							<h4><a href="preview.html">Whirlpool LTE5243D 3.4 CuFt.... </a></h4>
+							<h4><a href="preview.html">Produit similaire test </a></h4>
 							<a href="preview.html"><img src="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/content/images/product-img4.jpg" alt="" /></a>
 							<div class="price-details">
 								<div class="price-number">

@@ -82,7 +82,7 @@
 					</TR>
 					<?php } ?>
 				</table></div>
-				<input type="hidden" name="valide">
+				<input type="hidden" name="valide"><br />
 				<input type="submit" value="Passer la commande"></form>
 
 

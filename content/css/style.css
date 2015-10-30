@@ -553,10 +553,10 @@ article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, s
 	.grid_1_of_4 {
 		display: block;
 		float: left;
-		margin: 1% 0 1% 1.6%;
+		margin: 1% 0 1% 1%;
 	}
 	.grid_1_of_4:first-child {
-		margin-left: 0;
+		margin-right: 0;
 	}
 	.images_1_of_4 {
 		width:20.72%;
