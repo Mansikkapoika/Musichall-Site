@@ -60,8 +60,8 @@ class ControleurCommand {
 
 		// On vide alors le panier et on redirige
 			//$_SESSION['Panier']->videPanier();	// Cette fonction vide le panier, mais le tableau reste et est sans lignes.
-			session_unset($_SESSION['Panier']);
-			session_destroy($_SESSION['Panier']);
+			unset($_SESSION['Panier']);
+
 			$_SESSION['error'] = "Commande enregistrée.";
 			header('Location:/Musichall/');
 
