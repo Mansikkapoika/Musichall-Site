@@ -16,7 +16,7 @@
 
 				<!-- Partie d'ajout d'une catégorie -->
 
-				<form method="post" action="2014-musichall/controller/admin/addCategorie/formclick_add.php">
+				<form method="post" action="../controller/admin/addCategorie/formclick_add.php">
 					<u>Ajouter une catégorie</u> :<br /><br />
 					Nom :
 					<div class="clear"></div>
@@ -32,7 +32,7 @@
 				<!-- Partie d'ajout d'une sous-catégorie -->
 
 				<u>Ajouter une sous-catégorie</u> :<br /><br />
-				<form method="post" action="2014-musichall/controller/admin/addCategorie/formclick_add.php">
+				<form method="post" action="../controller/admin/addCategorie/formclick_add.php">
 					Catégorie parent :
 					<div class="clear"></div>
 					<div>

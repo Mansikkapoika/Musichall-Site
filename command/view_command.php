@@ -31,7 +31,8 @@
 			<td><?= $tabMat1['status']; ?></td>
 		</tr>
 		<?php } ?>
-	</table><br />
+	</table>
+	Montant : <?= $tabMat1['montant']; ?> euros.<br /><br />
 	<?php } ?>
 </div>
 

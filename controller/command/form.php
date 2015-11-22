@@ -56,17 +56,22 @@ class ControleurCommand {
 		// Récupération de l'id de l'utilisateur
 			$idUtilisateur = $this->user->getUser($_SESSION['username']);
 
+		// On établi le montant de la facture en fonction des produits, de leurs quantité et de leurs prix du panier
+			foreach ($Coll as $key=>$unProd)
+			{
+				$montant = $montant + $unProd->getQte()*$unProd->getPrix();
+			}
+
 		// On créer la commande et on récupère l'id de la commande retournée
-			$lastid = $this->mcommand->addCommand($idUtilisateur['idUtilisateur']);
+			$lastid = $this->mcommand->addCommand($idUtilisateur['idUtilisateur'], $montant);
 
 		// On ajoute les articles à la commande via l'id retourné
 			foreach ($Coll as $key=>$unProd)
 			{
-				$this->mcommand->insertCommand($unProd->getRef(), $lastid);
-				echo "OK<br/>";
+				$this->mcommand->insertCommand($unProd->getRef(), $lastid, $unProd->getQte());
 			}
 
-		// On vide alors le panier et on redirige
+			// On vide alors le panier et on redirige
 			//$_SESSION['Panier']->videPanier();	// Cette fonction vide le panier, mais le tableau reste et est sans lignes.
 			unset($_SESSION['Panier']);
 

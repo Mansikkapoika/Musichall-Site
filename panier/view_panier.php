@@ -38,24 +38,6 @@
 			<!-- Contenu de droite -->
 			<div class="content-bottom-right">
 				<h3>Panier</h3>
-				<!-- TABLEAU PANIER ICI -->
-
-				<!--<?php if(isset($_POST['valide']))
-				{
-					$array = array();
-					foreach ($_POST['test'] as $key => $value) {
-						
-						array_push($array, "$ _POST['test[".$key."]']");
-						
-					}
-					$comma_separated = implode(",", $array);
-					//print_r($comma_separated);
-					
-					echo "$ ctrl -> Command(".$comma_separated.");";
-					echo "<br/>Nombre d'elem donc: ".count($array);
-
-				} 
-				?>-->
 
 				<form method="post" action="../controller/command/formclick.php">
 					<?php $total = 0;
@@ -73,7 +55,6 @@
 						{ ?>
 					<TR>
 						<TD><?= $unProd->getRef(); ?></TD>
-						<!--<input type="hidden" name="test[<?php echo $i; ?>]" value="<?= $unProd->getRef(); ?>">-->
 						<TD><?= $unProd->getLib(); ?></TD>
 						<TD><?= $unProd->getPrix(); ?></TD>
 						<TD><a href='?ref=<?= $unProd->getRef(); ?>&action=diminuerProduit'><img src='../content/images/del_panier.png'/></a>  <?= $unProd->getQte(); ?>  <a href='?ref=<?= $unProd->getRef(); ?>&action=augmenterProduit'><img src='../content/images/add_panier.png'/></a></TD>

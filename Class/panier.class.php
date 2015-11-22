@@ -70,14 +70,17 @@ class Panier
    * @param type $unProduit Objet Produit à ajouter au panier
    */
   
-  public function ajouterUnProduit($unProduit)
+  public function ajouterUnProduit($unProduit,$quantite)
   {
     if($this->CollProduit->cleExiste($unProduit->getRef()))
     {
-      $this->augmenterQuantiteProduit($unProduit->getRef(),1);
+      $this->augmenterQuantiteProduit($unProduit->getRef(),$quantite);
     }
     else
+    {
       $this->CollProduit->ajouter($unProduit, $unProduit->getRef());
+      $this->augmenterQuantiteProduit($unProduit->getRef(),$quantite-1);
+    }
   }
   
   /**

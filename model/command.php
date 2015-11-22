@@ -4,18 +4,18 @@ require_once 'model.php';
 class mCommand extends Model {
 
 	// Variables des quantités à faire plus tard, on fera avec un seul produit pour l'instant
-	public function addCommand($idUtilisateur)
+	public function addCommand($idUtilisateur,$montant)
 	{
-		$this->getBdd()->query("INSERT INTO Commande VALUES ('', '$idUtilisateur', NOW(), 'En cours');");
+		$this->getBdd()->query("INSERT INTO Commande VALUES ('', '$idUtilisateur', NOW(), 'En cours', '$montant');");
 		$lastid = $this->getBdd()->insert_id;
 		return $lastid;
 	}
 
 
 	// Insertion des produits à une commande ne fonction de son id
-	public function insertCommand($ref,$idCommande)
+	public function insertCommand($ref,$idCommande,$qte)
 	{
-		$this->getBdd()->query("INSERT INTO ligneCom VALUES ('$ref', '$idCommande', '1');");
+		$this->getBdd()->query("INSERT INTO ligneCom VALUES ('$ref', '$idCommande', '$qte');");
 	}
 
 	public function getCommand($idUtilisateur)

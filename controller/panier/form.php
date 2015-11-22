@@ -42,9 +42,9 @@ class ControleurPanier {
 			$_SESSION['Panier'] = new Panier();
 		}
 		
-   		// On crée un produit et on l'ajoute au panier
+   		// On crée un produit et on l'ajoute au panier en fonction de la quantité choisie
 		$prod = new Produit($ref);
-		$_SESSION['Panier']->ajouterUnProduit($prod);
+		$_SESSION['Panier']->ajouterUnProduit($prod,$qte);
 
 		$_SESSION['error'] = "Votre produit ".$prod->getRef()." a été ajouté au panier";
 
