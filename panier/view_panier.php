@@ -15,7 +15,7 @@
 					<ul>
 						<h3>Toutes les catégories</h3>
 						<?php while ($item = $getCat->fetch_array()) { ?>
-						<li><a href="?cat=<?php echo $item ['idCategorie']; ?>"><?php echo $item['libelle']; ?></a></li>
+						<li><a href="<?php $this->Dir; ?>/2014-musichall/choice/?cat=<?php echo $item ['idCategorie']; ?>"><?php echo $item['libelle']; ?></a></li>
 						<?php } ?>
 						<li><a href="#">Promotions</a></li>
 					</ul>
