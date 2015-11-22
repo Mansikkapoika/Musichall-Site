@@ -2,35 +2,40 @@
 
 class controleurCommentaires {
 
-	private $Dir;
 	private $user;
 	private $get;
+	private $Dir;
 
 	public function __construct()
 	{
-		if(file_exists(getcwd().'/../../../model/model.php')) {
-			$this->Dir = getcwd().'/../../../';
-			require_once getcwd().'/../../../model/get.php';
-			require_once getcwd().'/../../../model/user.php';
-			require_once getcwd().'/../../../Class/panier.class.php';
+
+		if(file_exists(getcwd().'/../../../model/model.php')) 
+		{
+			$this->Dir = '../../../';
+			require_once '../../../model/get.php';
+			require_once '../../../model/user.php';
+			require_once '../../../class/panier.class.php';
 		}
-		if(file_exists(getcwd().'/../../model/model.php')) {
-			$this->Dir = getcwd().'/../../';
-			require_once getcwd().'/../../model/get.php';
-			require_once getcwd().'/../../model/user.php';
-			require_once getcwd().'/../../Class/panier.class.php';
+		elseif(file_exists(getcwd().'/../../model/model.php')) 
+		{
+			$this->Dir = '../../';
+			require_once '../../model/get.php';
+			require_once '../../model/user.php';
+			require_once '../../class/panier.class.php';
 		}
-		if(file_exists(getcwd().'/../model/model.php')) {
-			$this->Dir = getcwd().'/../';
-			require_once getcwd().'/../model/get.php';
-			require_once getcwd().'/../model/user.php';
-			require_once getcwd().'/../Class/panier.class.php';
+		elseif(file_exists(getcwd().'/../model/model.php')) 
+		{
+			$this->Dir = '../';
+			require_once '../model/get.php';
+			require_once '../model/user.php';
+			require_once '../class/panier.class.php';
 		}
-		if(file_exists(getcwd().'/model/model.php')) {
-			$this->Dir = getcwd().'/';
-			require_once getcwd().'/model/get.php';
-			require_once getcwd().'/model/user.php';
-			require_once getcwd().'/Class/panier.class.php';
+		elseif(file_exists(getcwd().'/model/model.php'))
+		{
+			$this->Dir = '/';
+			require_once 'model/get.php';
+			require_once 'model/user.php';
+			require_once 'class/panier.class.php';
 		}
 
 		$this->user = new User();

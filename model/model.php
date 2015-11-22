@@ -28,9 +28,11 @@ class Model
 		$user='root';
 		$password='mangos';
 		$database='musichall';
+		$port='3306';
 
 		if ($this->mysqli == null) {
-			$this->mysqli = new mysqli($host, $user, $password, $database);
+			$this->mysqli = new mysqli($host, $user, $password, $database, $port);
+			$this->mysqli->query("SET NAMES UTF8");
 		}
 		return $this->mysqli;
 

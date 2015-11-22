@@ -17,21 +17,21 @@
 						<ul id="etalage">
 							<li>
 								<a href="optionallink.html">
-									<img class="etalage_thumb_image" src="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/content/images/preview-small-img1.png" />
-									<img class="etalage_source_image" src="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/content/images/preview-large-img1.jpg" title="" />
+									<img class="etalage_thumb_image" src="../content/images/preview-small-img1.png" />
+									<img class="etalage_source_image" src="../content/images/preview-large-img1.jpg" title="" />
 								</a>
 							</li>
 							<li>
-								<img class="etalage_thumb_image" src="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/content/images/preview-small-img2.png"  />
-								<img class="etalage_source_image" src="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/content/images/preview-large-img2.jpg" title="" />
+								<img class="etalage_thumb_image" src="../content/images/preview-small-img2.png"  />
+								<img class="etalage_source_image" src="../content/images/preview-large-img2.jpg" title="" />
 							</li>
 							<li>
-								<img class="etalage_thumb_image" src="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/content/images/preview-small-img3.png"  />
-								<img class="etalage_source_image" src="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/content/images/preview-large-img3.jpg" />
+								<img class="etalage_thumb_image" src="../content/images/preview-small-img3.png"  />
+								<img class="etalage_source_image" src="../content/images/preview-large-img3.jpg" />
 							</li>
 							<li>
-								<img class="etalage_thumb_image" src="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/content/images/preview-small-img4.png" />
-								<img class="etalage_source_image" src="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/content/images/preview-large-img4.jpg" />
+								<img class="etalage_thumb_image" src="../content/images/preview-small-img4.png" />
+								<img class="etalage_source_image" src="../content/images/preview-large-img4.jpg" />
 							</li>
 						</ul>
 					</div>
@@ -53,7 +53,7 @@
 							</div>
 							<div class="share-desc">
 								<!-- Début formulaire (passage de la ref et de la quantité) -->
-								<form method="post" action="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/controller/panier/formclick.php">
+								<form method="post" action="../controller/panier/formclick.php">
 									<div class="share">
 										<p>Nombre d'unités :</p><input type="number" class="text_box" type="text" name="quantite" value="1" min="1" max="50" />				
 									</div>
@@ -156,7 +156,7 @@
 					<ul class="popular-products">
 						<li>
 							<h4><a href="preview.html">Produit similaire test </a></h4>
-							<a href="preview.html"><img src="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/content/images/product-img2.jpg" alt="" /></a>
+							<a href="preview.html"><img src="../content/images/product-img2.jpg" alt="" /></a>
 							<div class="price-details">
 								<div class="price-number">
 									<p><span class="rupees line-through">$899.95 </span> &nbsp; <span class="rupees">$839.93 </span></p>
@@ -169,7 +169,7 @@
 						</li>
 						<li>
 							<h4><a href="preview.html">Produit similaire test </a></h4>
-							<a href="preview.html"><img src="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/content/images/product-img3.jpg" alt="" /></a>
+							<a href="preview.html"><img src="../content/images/product-img3.jpg" alt="" /></a>
 							<div class="price-details">
 								<div class="price-number">
 									<p><span class="rupees line-through">$899.95 </span> &nbsp; <span class="rupees">$839.93 </span></p>
@@ -182,7 +182,7 @@
 						</li>
 						<li>
 							<h4><a href="preview.html">Produit similaire test </a></h4>
-							<a href="preview.html"><img src="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/content/images/product-img4.jpg" alt="" /></a>
+							<a href="preview.html"><img src="../content/images/product-img4.jpg" alt="" /></a>
 							<div class="price-details">
 								<div class="price-number">
 									<p><span class="rupees line-through">$899.95 </span> &nbsp; <span class="rupees">$839.93 </span></p>

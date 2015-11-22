@@ -3,7 +3,7 @@
 	<div class="wrap">
 		<div class="header_top">
 			<div class="logo">
-				<a href="index.html"><img src="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/content/images/logo.png" alt="" /></a>
+				<a href="index.html"><img src="/2014-musichall/content/images/logo.png" alt="" /></a>
 			</div>
 			<div class="header_top_right">
 				<div class="search_box">
@@ -22,7 +22,7 @@
 			<a class="toggleMenu" href="#">Menu</a>
 			<ul class="nav">
 				<li>
-					<a href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/">Accueil</a>
+					<a href="/2014-musichall/">Accueil</a>
 				</li>
 				<li>
 					<a href="#">Informations</a>
@@ -32,10 +32,10 @@
 				</li>
 				<?php   if (!isset($_SESSION['username'])) { ?>
 				<li>
-					<a href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/register">S'enregistrer</a>
+					<a href="/2014-musichall/register">S'enregistrer</a>
 				</li>
 				<li>
-					<a href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/connexion">Se connecter</a>
+					<a href="/2014-musichall/connexion">Se connecter</a>
 				</li>
 				<?php } else { ?>
 				<li>
@@ -43,11 +43,11 @@
 				</li>
 				<?php if (isset($_SESSION['username'])) { if ($access) { ?>
 				<li>
-					<a href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/admin">Admin</a>
+					<a href="/2014-musichall/admin">Admin</a>
 				</li>
 				<?php } else { } } ?>
 				<li>
-					<a href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/connexion/disconnect.php">Se déconnecter</a>
+					<a href="/2014-musichall/connexion/disconnect.php">Se déconnecter</a>
 				</li>
 				<?php } ?>
 				<li>
@@ -68,7 +68,7 @@
 				<a href="#">Promotions</a>
 			</div>
 			<div class="slider-img">
-				<img src="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/content/images/slider-img.png" alt="" />
+				<img src="/2014-musichall/content/images/slider-img.png" alt="" />
 			</div>
 			<div class="clear"></div>
 		</div> -->

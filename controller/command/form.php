@@ -4,23 +4,31 @@ class ControleurCommand {
 
 	private $user;
 	private $mcommand;
+	private $Dir;
 
 	public function __construct()
 	{
-		if(file_exists(getcwd().'/../../model/model.php')) {
-			require_once getcwd().'/../../model/user.php';
-			require_once getcwd().'/../../model/command.php';
-			require_once getcwd().'/../../Class/panier.class.php';
+
+		if(file_exists(getcwd().'/../../model/model.php')) 
+		{
+			$this->Dir = '../../';
+			require_once '../../model/user.php';
+			require_once '../../model/command.php';
+			require_once '../../class/panier.class.php';
 		}
-		if(file_exists(getcwd().'/../model/model.php')) {
-			require_once getcwd().'/../model/user.php';
-			require_once getcwd().'/../model/command.php';
-			require_once getcwd().'/../Class/panier.class.php';
+		elseif(file_exists(getcwd().'/../model/model.php')) 
+		{
+			$this->Dir = '../';
+			require_once '../model/user.php';
+			require_once '../model/command.php';
+			require_once '../class/panier.class.php';
 		}
-		if(file_exists(getcwd().'/model/model.php')) {
-			require_once getcwd().'/model/user.php';
-			require_once getcwd().'/model/command.php';
-			require_once getcwd().'/Class/panier.class.php';
+		elseif(file_exists(getcwd().'/model/model.php'))
+		{
+			$this->Dir = '/';
+			require_once 'model/user.php';
+			require_once 'model/command.php';
+			require_once 'class/panier.class.php';
 		}
 
 		$this->user = new User();
@@ -39,7 +47,7 @@ class ControleurCommand {
 			if(!isset($_SESSION['Panier']))
 			{
 				$_SESSION['error'] = "Vous n'avez pas d'articles dans le panier.";
-				header('Location:/Musichall/');
+				header('Location: ../../');
 			}
 
 		// Récupération des informations du panier
@@ -63,13 +71,13 @@ class ControleurCommand {
 			unset($_SESSION['Panier']);
 
 			$_SESSION['error'] = "Commande enregistrée.";
-			header('Location:/Musichall/');
+			header('Location: ../../');
 
 		}
 		else
 		{
 			$_SESSION['error'] = "Vous devez être connecté afin de valider une commande.";
-			header('Location:/Musichall/');
+			header('Location: ../../');
 		}
 
 	}

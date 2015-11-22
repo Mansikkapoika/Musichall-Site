@@ -6,17 +6,21 @@ class ControleurAddCat {
 
 	public function __construct()
 	{
-		if(file_exists(getcwd().'/../../../model/model.php')) {
-			require_once getcwd().'/../../../model/admin.php';
+		if(file_exists(getcwd().'/../../../model/model.php')) 
+		{
+			require_once '../../../model/admin.php';
 		}
-		if(file_exists(getcwd().'/../../model/model.php')) {
-			require_once getcwd().'/../../model/admin.php';
+		elseif(file_exists(getcwd().'/../../model/model.php')) 
+		{
+			require_once '../../model/admin.php';
 		}
-		if(file_exists(getcwd().'/../model/model.php')) {
-			require_once getcwd().'/../model/admin.php';
+		elseif(file_exists(getcwd().'/../model/model.php')) 
+		{
+			require_once '../model/admin.php';
 		}
-		if(file_exists(getcwd().'/model/model.php')) {
-			require_once getcwd().'/model/admin.php';
+		elseif(file_exists(getcwd().'/model/model.php'))
+		{
+			require_once 'model/admin.php';
 		}
 
 		$this->admin = new Admin();
@@ -32,19 +36,19 @@ class ControleurAddCat {
 		if ($verif >1)
 		{
 			$_SESSION['error'] = "La catégorie existe déjà.";
-			header('Location:/Musichall/admin');
+			header('Location: 2014-musichall/admin/');
 		}
 		else
 		{
 			if ($this->admin->AddCat($nom))			// Ajout de la catégorie
 			{
 				$_SESSION['error'] = "Catégorie ajoutée.";
-				header('Location:/Musichall/admin');
+				header('Location: 2014-musichall/admin/');
 			}
 			else
 			{
 				$_SESSION['error'] = "Catégorie non ajoutée.";
-				header('Location:/Musichall/admin');
+				header('Location: 2014-musichall/admin/');
 			}
 		}
 
@@ -60,19 +64,19 @@ class ControleurAddCat {
 		if ($verif >1)
 		{
 			$_SESSION['error'] = "La sous catégorie existe déjà.";
-			header('Location:/Musichall/admin');
+			header('Location: 2014-musichall/admin/');
 		}
 		else
 		{
 			if ($this->admin->AddSousCat($nom,$categorieparent))		// Ajout de la sous catégorie
 			{
 				$_SESSION['error'] = "Sous catégorie ajoutée.";
-				header('Location:/Musichall/admin');
+				header('Location: 2014-musichall/admin/');
 			}
 			else
 			{
 				$_SESSION['error'] = "Sous catégorie non ajoutée.";
-				header('Location:/Musichall/admin');
+				header('Location: 2014-musichall/admin/');
 			}
 		}
 

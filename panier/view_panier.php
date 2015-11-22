@@ -15,7 +15,7 @@
 					<ul>
 						<h3>Toutes les catégories</h3>
 						<?php while ($item = $getCat->fetch_array()) { ?>
-						<li><a href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/choice/?cat=<?php echo $item ['idCategorie']; ?>"><?php echo $item['libelle']; ?></a></li>
+						<li><a href="?cat=<?php echo $item ['idCategorie']; ?>"><?php echo $item['libelle']; ?></a></li>
 						<?php } ?>
 						<li><a href="#">Promotions</a></li>
 					</ul>
@@ -57,7 +57,7 @@
 				} 
 				?>-->
 
-				<form method="post" action="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/controller/command/formclick.php">
+				<form method="post" action="../controller/command/formclick.php">
 					<?php $total = 0;
 					echo "<div class=\"tftable\">";
 					echo "Votre panier <br/><br/>";
@@ -76,9 +76,9 @@
 						<!--<input type="hidden" name="test[<?php echo $i; ?>]" value="<?= $unProd->getRef(); ?>">-->
 						<TD><?= $unProd->getLib(); ?></TD>
 						<TD><?= $unProd->getPrix(); ?></TD>
-						<TD><a href='<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/panier/?ref=<?= $unProd->getRef(); ?>&action=diminuerProduit'><img src='<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/content/images/del_panier.png'/></a>  <?= $unProd->getQte(); ?>  <a href='<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/panier/?ref=<?= $unProd->getRef(); ?>&action=augmenterProduit'><img src='<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/content/images/add_panier.png'/></a></TD>
+						<TD><a href='?ref=<?= $unProd->getRef(); ?>&action=diminuerProduit'><img src='../content/images/del_panier.png'/></a>  <?= $unProd->getQte(); ?>  <a href='?ref=<?= $unProd->getRef(); ?>&action=augmenterProduit'><img src='../content/images/add_panier.png'/></a></TD>
 						<TD><?= $unProd->getQte()*$unProd->getPrix(); ?></TD>
-						<TD><a href='<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/panier/?ref=<?= $unProd->getRef(); ?>&action=supprimerProduit'><img src='<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/content/images/supp_panier.png'/></a></TD>
+						<TD><a href='?ref=<?= $unProd->getRef(); ?>&action=supprimerProduit'><img src='../content/images/supp_panier.png'/></a></TD>
 					</TR>
 					<?php } ?>
 				</table></div>

@@ -1,3 +1,3 @@
 ﻿<?php
 // Pointeur vers le contrôleur click
-require_once(getcwd().'/../controller/panier/click.php');
+require_once('../controller/panier/click.php');

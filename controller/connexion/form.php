@@ -3,17 +3,24 @@
 class ControleurConnexion {
 
 	private $user;
+	private $Dir;
 
 	public function __construct()
 	{
-		if(file_exists(getcwd().'/../../model/model.php')) {
-			require_once getcwd().'/../../model/user.php';
+		if(file_exists(getcwd().'/../../model/model.php')) 
+		{
+			$this->Dir = '../../';
+			require_once '../../model/user.php';
 		}
-		if(file_exists(getcwd().'/../model/model.php')) {
-			require_once getcwd().'/../model/user.php';
+		elseif(file_exists(getcwd().'/../model/model.php')) 
+		{
+			$this->Dir = '../';
+			require_once '../model/user.php';
 		}
-		if(file_exists(getcwd().'/model/model.php')) {
-			require_once getcwd().'/model/user.php';
+		elseif(file_exists(getcwd().'/model/model.php'))
+		{
+			$this->Dir = '/';
+			require_once 'model/user.php';
 		}
 
 		$this->user = new User();
@@ -31,18 +38,18 @@ class ControleurConnexion {
 				session_start();
 				$_SESSION['username'] = $ech_username;
 				$_SESSION['error'] = "Connexion réussie.";
-				header('Location:/Musichall/');
+				header('Location: ../../');
 			}
 			else
 			{
 				$_SESSION['error'] = "Login ou mot de passe incorrect.";
-				header('Location:/Musichall/connexion');
+				header('Location: ../../connexion/');
 			}
 		}
 		else
 		{
 			$_SESSION['error'] = "Un des champs n'a pas été rempli.";
-			header('Location:/Musichall/connexion');
+			header('Location: ../../2014-musichall/connexion/');
 		}
 
 	}

@@ -21,4 +21,4 @@
 	});
 </script>
 <a href="#" id="toTop"> </a>
-<script type="text/javascript" src="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/content/js/navigation.js"></script>
+<script type="text/javascript" src="content/js/navigation.js"></script>

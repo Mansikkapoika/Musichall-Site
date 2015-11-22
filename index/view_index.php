@@ -1,4 +1,4 @@
-﻿<?php ob_start(); ?>
+<?php ob_start(); ?>
 <?php if(isset($_SESSION['error']))
 { ?>
 	<div class="error"><h3>
@@ -45,7 +45,7 @@
 					<ul>
 						<h3>Toutes les catégories</h3>
 						<?php while ($item = $getCat->fetch_array()) { ?>
-						<li><a href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/choice/?cat=<?php echo $item ['idCategorie']; ?>"><?php echo $item['libelle']; ?></a></li>
+						<li><a href="choice/?cat=<?php echo $item ['idCategorie']; ?>"><?php echo $item['libelle']; ?></a></li>
 						<?php } ?>
 						<li><a href="#">Promotions</a></li>
 					</ul>

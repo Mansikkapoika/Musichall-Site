@@ -5,14 +5,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-	<link href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/content/css/style.css" rel="stylesheet" type="text/css" media="all"/>
-	<script type="text/javascript" src="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/content/js/jquery-1.9.0.min.js"></script> 
-	<script type="text/javascript" src="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/content/js/jquery.openCarousel.js"></script>
-	<script type="text/javascript" src="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/content/js/easing.js"></script>
-	<script type="text/javascript" src="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/content/js/move-top.js"></script>
+	<link href="/2014-musichall/content/css/style.css" rel="stylesheet" type="text/css" media="all"/>
+	<script type="text/javascript" src="/2014-musichall/content/js/jquery-1.9.0.min.js"></script> 
+	<script type="text/javascript" src="/2014-musichall/content/js/jquery.openCarousel.js"></script>
+	<script type="text/javascript" src="/2014-musichall/content/js/easing.js"></script>
+	<script type="text/javascript" src="/2014-musichall/content/js/move-top.js"></script>
 	<!-- CSS et JS de la page d'affichage des produits -->
-	<script src="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/content/js/easyResponsiveTabs.js" type="text/javascript"></script>
-	<link href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/content/css/easy-responsive-tabs.css" rel="stylesheet" type="text/css" media="all"/>
+	<script src="/2014-musichall/content/js/easyResponsiveTabs.js" type="text/javascript"></script>
+	<link href="/2014-musichall/content/css/easy-responsive-tabs.css" rel="stylesheet" type="text/css" media="all"/>
 	<script type="text/javascript">
 		$(document).ready(function () {
 			$('#horizontalTab').easyResponsiveTabs({
@@ -22,8 +22,8 @@
         });
 		});
 	</script>		
-	<link rel="stylesheet" href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/content/css/etalage.css">
-	<script src="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/content/js/jquery.etalage.min.js"></script>
+	<link rel="stylesheet" href="/2014-musichall/content/css/etalage.css">
+	<script src="/2014-musichall/content/js/jquery.etalage.min.js"></script>
 	<script>
 		jQuery(document).ready(function($){
 
@@ -40,7 +40,7 @@
 
 		});
 	</script>
-	<script src="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/content/js/star-rating.js" type="text/javascript"></script>
+	<script src="/2014-musichall/content/js/star-rating.js" type="text/javascript"></script>
 </head>
 <body>
 	<!-- START Header -->
@@ -56,7 +56,7 @@
 			<?php }
 			else
 				{ ?>
-			<div class="panier"><h3><div class="bloc"><i class="fa fa-shopping-cart"></i> Panier : <?php echo $_SESSION['Panier']->getNbProd(); ?> article(s) <a href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/panier">Voir</a></div></h3></div>
+			<div class="panier"><h3><div class="bloc"><i class="fa fa-shopping-cart"></i> Panier : <?php echo $_SESSION['Panier']->getNbProd(); ?> article(s) <?php $chem = $this->Dir."2014-musichall/panier"; ?><a href="<?= $chem; ?>">Voir</a></div></h3></div>
 			<?php } ?>
 			<div class="line"></div>
 			<!-- Barre du panier -->

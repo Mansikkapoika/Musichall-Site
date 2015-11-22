@@ -15,7 +15,7 @@
 				<div class="clear"></div>
 
 				<!-- Formulaire de connexion... -->
-				<form method="post" action="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/controller/connexion/formclick.php">
+				<form method="post" action="../controller/connexion/formclick.php">
 					Pseudo :
 					<div>
 						<input name="username" type="text" class="textbox textbox1" placeholder="Pseudo" required="required">

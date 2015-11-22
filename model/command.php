@@ -18,13 +18,18 @@ class mCommand extends Model {
 		$this->getBdd()->query("INSERT INTO ligneCom VALUES ('$ref', '$idCommande', '1');");
 	}
 
-	public function getCommand()
+	public function getCommand($idUtilisateur)
 	{
-		return $this->getBdd()->query("SELECT Commande.idCommande as idCommande, date, status, materiel.libelle as libelle, quantite
-			FROM Commande
-			INNER JOIN ligneCom ON Commande.idCommande = ligneCom.idCommande
-			INNER JOIN materiel ON ligneCom.idMateriel = materiel.idMateriel
-			WHERE idUtilisateur = 1 ");
+		return $this->getBdd()->query("SELECT * FROM commande WHERE idUtilisateur = $idUtilisateur");
+	}
+
+	public function getMatCommand($idCommande)
+	{
+		return $this->getBdd()->query("SELECT *
+			FROM ligneCom
+			INNER JOIN materiel ON ligneCom.idMateriel = Materiel.idMateriel
+			INNER JOIN commande ON ligneCom.idCommande = commande.idCommande
+			WHERE ligneCom.idCommande = $idCommande");
 	}
 
 }

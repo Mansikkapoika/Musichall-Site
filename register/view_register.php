@@ -15,7 +15,8 @@
 				<div class="clear"></div>
 
 				<!-- Formulaire d'inscription... -->
-				<form method="post" action="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/controller/register/formclick.php">
+
+				<form method="post" action="/2014-musichall/controller/register/formclick.php">
 					Nom : 
 					<div>
 						<input name="usernom" type="text" class="textbox textbox1" placeholder="Nom" required="required">
@@ -70,4 +71,4 @@ if(isset($_SESSION['error']))
 {
 	unset($_SESSION['error']);
 }
-?>
+?>		

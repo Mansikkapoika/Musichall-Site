@@ -10,7 +10,7 @@
 			<!-- Tableau de commentaires ? + bouton d'acceptation à coder ? -->
 
 			<div class="add-cart">								
-				<h4><a href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/admin/commentaires">Accepter commenaite</a></h4>
+				<h4><a href="admin/commentaires">Accepter commenaite</a></h4>
 				<div class="clear"></div>
 			</div>
 			<div class="clear"></div><hr>

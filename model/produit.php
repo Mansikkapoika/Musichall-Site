@@ -1,6 +1,20 @@
 <?php
-require_once 'model.php';
-require_once "/../Class/materiel.php";
+
+if(file_exists(getcwd().'/../../model/model.php')) 
+{
+	require_once getcwd().'/../../model/model.php';
+	require_once getcwd().'/../../class/materiel.php';
+}
+elseif(file_exists(getcwd().'/../model/model.php')) 
+{
+	require_once getcwd().'/../model/model.php';
+	require_once getcwd().'/../class/materiel.php';
+}
+elseif(file_exists(getcwd().'/model/model.php'))
+{
+	require_once getcwd().'/model/model.php';
+	require_once getcwd().'/class/materiel.php';
+}
 
 // Sert de lien à la classe produit
 

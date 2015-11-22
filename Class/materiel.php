@@ -1,6 +1,15 @@
 <?php
 //Chargement du modèle contenant les appels à la base de données
-require_once ('/../Model/produit.php');
+
+if(file_exists(getcwd().'/../../model/model.php')) {
+  require_once getcwd().'/../../model/produit.php';
+}
+elseif(file_exists(getcwd().'/../model/model.php')) {
+  require_once getcwd().'/../model/produit.php';
+}
+elseif(file_exists(getcwd().'/model/model.php')) {
+  require_once getcwd().'/model/produit.php';
+}
 
 /**
  * Permet de créer un produit pour un ajout ultérieur dans le panier

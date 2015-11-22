@@ -3,17 +3,28 @@
 class ControleurRegister {
 
 	private $user;
+	private $Dir;
 
 	public function __construct()
 	{
-		if(file_exists(getcwd().'/../../model/model.php')) {
-			require_once getcwd().'/../../model/user.php';
+		if(file_exists('../model/model.php')) {
+			require_once '../model/user.php';
 		}
-		if(file_exists(getcwd().'/../model/model.php')) {
-			require_once getcwd().'/../model/user.php';
+
+		if(file_exists(getcwd().'/../../model/model.php')) 
+		{
+			$this->Dir = '../../';
+			require_once '../../model/user.php';
 		}
-		if(file_exists(getcwd().'/model/model.php')) {
-			require_once getcwd().'/model/user.php';
+		elseif(file_exists(getcwd().'/../model/model.php')) 
+		{
+			$this->Dir = '../';
+			require_once '../model/user.php';
+		}
+		elseif(file_exists(getcwd().'/model/model.php'))
+		{
+			$this->Dir = '/';
+			require_once 'model/user.php';
 		}
 
 		$this->user = new User();
@@ -35,20 +46,20 @@ class ControleurRegister {
 			{
 				$this->user->addUser($nom,$prenom,$username,$email,md5($password),$newsletter);
 				$_SESSION['error'] = "Inscription réussie. Vous pouvez vous connecter.";
-				header('Location: /Musichall');
+				header('Location: 2014-musichall/');
 			}
 			else
 			{
 				$upperName = mb_strtoupper($username, 'UTF-8');
 				// echo "Le login $upperName est déjà utilisé.";
 				$_SESSION['error'] = "Le login $upperName est déjà utilisé.";
-				header('Location: /Musichall/register');
+				header('Location: 2014-musichall/register/');
 			}
 		}
 		else
 		{
 			$_SESSION['error'] = "Les mots de passes ne sont pas identiques.";
-			header('Location: /Musichall/register');
+			header('Location: 2014-musichall/register/');
 		}
 
 	}

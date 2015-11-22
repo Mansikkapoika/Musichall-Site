@@ -8,7 +8,7 @@
 				<ul>
 					<h3>Toutes les catégories</h3>
 					<?php while ($itemCat = $getCat->fetch_array()) { ?>
-					<li><a href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/choice/?cat=<?php echo $itemCat ['idCategorie']; ?>"><?php echo $itemCat['libelle']; ?></a></li>
+					<li><a href="?cat=<?php echo $itemCat ['idCategorie']; ?>"><?php echo $itemCat['libelle']; ?></a></li>
 					<?php } ?>
 					<li><a href="#">Promotions</a></li>
 				</ul>
@@ -39,11 +39,11 @@
 				<!-- Boucle d'affichage des BOX des sous-catégories -->
 				<?php while ($itemSousCat = $getSousCat->fetch_array()) { ?>
 				<div class="grid_1_of_4 images_1_of_4">
-					<h4><a href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/choice/?cat=<?php echo $getCatSelect['idCategorie']; ?>&souscat=<?php echo $itemSousCat['idSousCategorie']; ?>"><?php echo $itemSousCat['libelle']; ?></a></h4>
-					<a href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/choice/?cat=<?php echo $getCatSelect['idCategorie']; ?>&souscat=<?php echo $itemSousCat['idSousCategorie']; ?>"><img src="../content/images/product-img1.jpg" alt="" /></a>
+					<h4><a href="?cat=<?php echo $getCatSelect['idCategorie']; ?>&souscat=<?php echo $itemSousCat['idSousCategorie']; ?>"><?php echo $itemSousCat['libelle']; ?></a></h4>
+					<a href="?cat=<?php echo $getCatSelect['idCategorie']; ?>&souscat=<?php echo $itemSousCat['idSousCategorie']; ?>"><img src="../content/images/product-img1.jpg" alt="" /></a>
 					<div class="price-details">
 						<div class="add-cart">								
-							<h4><a href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/choice/?cat=<?php echo $getCatSelect['idCategorie']; ?>&souscat=<?php echo $itemSousCat['idSousCategorie']; ?>">Voir les produits</a></h4>
+							<h4><a href="?cat=<?php echo $getCatSelect['idCategorie']; ?>&souscat=<?php echo $itemSousCat['idSousCategorie']; ?>">Voir les produits</a></h4>
 						</div>
 						<div class="clear"></div>
 					</div>					 
@@ -74,11 +74,11 @@
 						}
 						while ($itemMateriel = $getMaterielSelect->fetch_array()) { ?>
 						<div class="grid_1_of_4 images_1_of_4">
-							<h4><a href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/product/?souscat=<?php echo $idSousCat; ?>&mat=<?php echo $itemMateriel['idMateriel']; ?>"><?php echo $itemMateriel['libelle']; ?></a></h4>
-							<a href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/product/?souscat=<?php echo $idSousCat; ?>&mat=<?php echo $itemMateriel['idMateriel']; ?>"><img src="../content/images/product-img1.jpg" alt="" /></a>
+							<h4><a href="../product/?souscat=<?php echo $idSousCat; ?>&mat=<?php echo $itemMateriel['idMateriel']; ?>"><?php echo $itemMateriel['libelle']; ?></a></h4>
+							<a href="../product/?souscat=<?php echo $idSousCat; ?>&mat=<?php echo $itemMateriel['idMateriel']; ?>"><img src="../content/images/product-img1.jpg" alt="" /></a>
 							<div class="price-details">
 								<div class="add-cart">								
-									<h4><a href="<?php $_SERVER['DOCUMENT_ROOT'] ?>/Musichall/product/?souscat=<?php echo $idSousCat; ?>&mat=<?php echo $itemMateriel['idMateriel']; ?>">Voir le produit</a></h4>
+									<h4><a href="../product/?souscat=<?php echo $idSousCat; ?>&mat=<?php echo $itemMateriel['idMateriel']; ?>">Voir le produit</a></h4>
 								</div>
 								<div class="clear"></div>
 							</div>					 

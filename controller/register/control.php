@@ -9,23 +9,26 @@ class controleurRegister {
 	public function __construct()
 	{
 
-		if(file_exists(getcwd().'/../../model/model.php')) {
-			$this->Dir = getcwd().'/../../';
+		if(file_exists(getcwd().'/../../model/model.php')) 
+		{
+			$this->Dir = '../../';
 			require_once getcwd().'/../../model/get.php';
 			require_once getcwd().'/../../model/user.php';
-			require_once getcwd().'/../../Class/panier.class.php';
+			require_once getcwd().'/../../class/panier.class.php';
 		}
-		if(file_exists(getcwd().'/../model/model.php')) {
-			$this->Dir = getcwd().'/../';
+		elseif(file_exists(getcwd().'/../model/model.php')) 
+		{
+			$this->Dir = '../';
 			require_once getcwd().'/../model/get.php';
 			require_once getcwd().'/../model/user.php';
-			require_once getcwd().'/../Class/panier.class.php';
+			require_once getcwd().'/../class/panier.class.php';
 		}
-		if(file_exists(getcwd().'/model/model.php')) {
-			$this->Dir = getcwd().'/';
+		elseif(file_exists(getcwd().'/model/model.php'))
+		{
+			$this->Dir = '/';
 			require_once getcwd().'/model/get.php';
 			require_once getcwd().'/model/user.php';
-			require_once getcwd().'/Class/panier.class.php';
+			require_once getcwd().'/class/panier.class.php';
 		}
 
 		$this->user = new User();
