@@ -46,20 +46,20 @@ class ControleurRegister {
 			{
 				$this->user->addUser($nom,$prenom,$username,$email,md5($password),$newsletter);
 				$_SESSION['error'] = "Inscription réussie. Vous pouvez vous connecter.";
-				header('Location: 2014-musichall/');
+				header('Location: ../../');
 			}
 			else
 			{
 				$upperName = mb_strtoupper($username, 'UTF-8');
 				// echo "Le login $upperName est déjà utilisé.";
 				$_SESSION['error'] = "Le login $upperName est déjà utilisé.";
-				header('Location: 2014-musichall/register/');
+				header('Location: ../../register/');
 			}
 		}
 		else
 		{
 			$_SESSION['error'] = "Les mots de passes ne sont pas identiques.";
-			header('Location: 2014-musichall/register/');
+			header('Location: ../../register/');
 		}
 
 	}
