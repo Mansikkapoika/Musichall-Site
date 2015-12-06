@@ -33,6 +33,11 @@ class Get extends Model {
 		return $this->getBdd()->query("SELECT * FROM souscategorie WHERE idCategorie ='$id'");
 	}
 
+	public function getTitreSousCat($id)
+	{
+		return $this->getBdd()->query("SELECT libelle FROM souscategorie WHERE idSousCategorie ='$id'");
+	}
+
 	// Fonction pour récupérer tous les produits
 	public function getMateriel()
 	{

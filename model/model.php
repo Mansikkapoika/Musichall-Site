@@ -4,8 +4,8 @@
 function BDDConnexionPDO()
 {
 	$PARAM_hote='localhost'; 	$PARAM_port='3306';
-	$PARAM_nom_bd='2014-musichall_musichall'; 	$PARAM_utilisateur='2014-musichall'; 
-	$PARAM_mot_passe='123456'; 
+	$PARAM_nom_bd='musichall'; 	$PARAM_utilisateur='root'; 
+	$PARAM_mot_passe='mangos'; 
 	try
 	{      $connexion = new PDO('mysql:host='.$PARAM_hote.'; dbname='.$PARAM_nom_bd, $PARAM_utilisateur, $PARAM_mot_passe);
 }
@@ -25,9 +25,9 @@ class Model
 	public function getBdd() {
 
 		$host='localhost';
-		$user='2014-musichall';
-		$password='123456';
-		$database='2014-musichall_musichall';
+		$user='root';
+		$password='mangos';
+		$database='musichall';
 		$port='3306';
 
 		if ($this->mysqli == null) {
