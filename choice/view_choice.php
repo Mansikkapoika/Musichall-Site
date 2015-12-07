@@ -60,7 +60,7 @@
 				$getSousCat = $getSousCat->fetch_array(); ?>
 				<div class="content-bottom-right">
 					<!-- Ouverture de l'encadré adapté à la boucle d'affichage des PRODUITS des sous-catégories -->
-					<h3>Tous les produits - <?php echo $getCatSelect['libelle']." :: ".$titre['libelle']; ?></h3>
+					<h3>Tous les produits - <?php echo $getCatSelect['libelle']." :: ".$titreSC['libelle']; ?></h3>
 					<div class="section group">
 						<!-- Boucle d'affichage des BOX des PRODUITS des sous-catégories -->
 						<?php 
@@ -90,7 +90,7 @@
 					</div>
 					<!-- Fermeture de l'encadré adapté à la boucle d'affichage des PRODUITS des sous-catégories -->
 					<div class="product-articles">
-						<h3>Tous les produits - <?php echo $getCatSelect['libelle']." :: ".$titre['libelle']; ?></h3>
+						<h3>Tous les produits - <?php echo $getCatSelect['libelle']." :: ".$titreSC['libelle']; ?></h3>
 						<?php	
 					}
 					?>

@@ -82,7 +82,7 @@ class controleurChoice {
 			{
 				$artiveChoix = false;
 				$activeProduit = true;
-				$titre = $this->get->getTitreSousCat($souscat)->fetch_array();
+				$titreSC = $this->get->getTitreSousCat($souscat)->fetch_array();
 				$getMaterielSelect = $this->get->getMaterielSelect($souscat);
 				$Material = true;
 				$idSousCat = $_GET['souscat'];
