@@ -3,8 +3,8 @@ require_once "produit.class.php";
 require_once "collection.class.php";
 /**
  * Classe Panier 
- * Permet de gérer un panier d'objets Produit
- * Nécéssite la classe produit.class.php
+ * Permet de gÃ©rer un panier d'objets Produit
+ * NÃ©cÃ©ssite la classe produit.class.php
  */
 class Panier
 {
@@ -34,9 +34,9 @@ class Panier
   }
   
   /**
-   * Augmenter le produit de référence $ref de la quantité $qte
+   * Augmenter le produit de rÃ©fÃ©rence $ref de la quantitÃ© $qte
    * @param type $ref  Reference du produit
-   * @param type $qte  Nombre de produits à ajouter à la quantité
+   * @param type $qte  Nombre de produits Ã  ajouter Ã  la quantitÃ©
    */
   
   public function augmenterQuantiteProduit($ref ,$qte)
@@ -48,9 +48,9 @@ class Panier
   }
   
   /**
-   * Diminuer le produit de référence $ref de la quantité $qte
+   * Diminuer le produit de rÃ©fÃ©rence $ref de la quantitÃ© $qte
    * @param type $ref  Reference du produit
-   * @param type $qte  Nombre de produits à retirer à la quantité
+   * @param type $qte  Nombre de produits Ã  retirer Ã  la quantitÃ©
    */
   public function diminuerQuantiteProduit($ref ,$qte)
   {
@@ -66,8 +66,8 @@ class Panier
 
   /**
    * Ajoute un produit au panier s'il n'existe pas encore
-   * Sinon ajoute une unité à la quantité commandée
-   * @param type $unProduit Objet Produit à ajouter au panier
+   * Sinon ajoute une unitÃ© Ã  la quantitÃ© commandÃ©e
+   * @param type $unProduit Objet Produit Ã  ajouter au panier
    */
   
   public function ajouterUnProduit($unProduit,$quantite)
@@ -85,7 +85,7 @@ class Panier
   
   /**
    * Supprime le produit du panier
-   * @param type $refer  Référence du produit
+   * @param type $refer  RÃ©fÃ©rence du produit
    */
   public function supprimerUnProduit($refer)
   {

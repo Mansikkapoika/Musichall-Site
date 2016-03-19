@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 class controleurProduct {
 
@@ -55,6 +55,17 @@ class controleurProduct {
 			}
 		}
 
+		// Fonction de troncage 
+		function trunque($str, $nb) {
+			if (strlen($str) > $nb) {
+				$str = substr($str, 0, $nb);
+				$position_espace = strrpos($str, " ");
+				$texte = substr($str, 0, $position_espace); 
+				$str = $texte."...";
+			}
+			return $str;
+		}
+
 		// Obligé de faire un test, car si aucune action est entrée, la variable GET n'existe pas, une erreur s'affiche sans rediriger l'utilisateur
 		if (isset($_GET['souscat']) && isset($_GET['mat']))
 		{
@@ -66,7 +77,8 @@ class controleurProduct {
 		$getMat = $this->get->getInfoMateriel($souscat,$mat);
 		if (isset($souscat) && isset($mat) && $getMat = $getMat->fetch_assoc())
 		{
-			// Infos sur le matériel
+			// Infos de la page : du produits etc (pris par le curseurs de la variable $getMat directement) + infos produits similaires
+			$prodSimilaires = $this->get->getProduitSimilaire($getMat['idSousCategorie']);
 		}
 		else
 		{

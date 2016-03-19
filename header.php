@@ -25,10 +25,7 @@
 					<a href="/2014-musichall/">Accueil</a>
 				</li>
 				<li>
-					<a href="#">Informations</a>
-				</li>
-				<li>
-					<a href="#">Nouveautés</a>
+					<a href="/2014-musichall/infos">Informations</a>
 				</li>
 				<?php   if (!isset($_SESSION['username'])) { ?>
 				<li>
@@ -51,10 +48,10 @@
 				</li>
 				<?php } ?>
 				<li>
-					<a href="#">Aide</a>
+					<a href="/2014-musichall/help">Aide</a>
 				</li>
 				<li>
-					<a href="#">Nous contacter</a>
+					<a href="/2014-musichall/contact">Nous contacter</a>
 				</li>
 			</ul>
 			<span class="left-ribbon"> </span> 

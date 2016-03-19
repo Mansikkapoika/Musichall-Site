@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 class controleurRegister {
 
@@ -42,12 +42,11 @@ class controleurRegister {
 		$titre = 'Music Hall';
 		$position = 'Inscription';
 
-		// Vérification admin
+		// Vérification admin (Affiche lien administration menu + permission d'accès page)
 		if (isset($_SESSION['username'])) {
 			$username = $this->user->echapVar($_SESSION['username']);
-			$reqAdmin = $this->user->getSecu(1, $username);
-			$reqAccess = $reqAdmin -> fetch_array();
-			if ($reqAccess['codeSecu'] == 3)
+			$reqAdmin = $this->user->getUser($username);
+			if ($reqAdmin['codeSecu'] == 3)
 			{
 				$access = true;
 			}

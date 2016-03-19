@@ -1,4 +1,4 @@
-﻿.product_desc{
+.product_desc{
 	clear:both;
 	margin-top:30px;
 }
@@ -10,8 +10,8 @@
 	list-style: none;
 	cursor: pointer;
 	float: left;
-    margin-right: 5px;
-    border-radius: 2px 2px 0 0;
+	margin-right: 5px;
+	border-radius: 2px 2px 0 0;
 }
 .resp-tab-item{
 	background:#CBCBCB;
@@ -47,10 +47,10 @@ h2.resp-accordion {
 	color:#E4292F;
 }
 .resp-content-active, .resp-accordion-active {
-   display: block;
+	display: block;
 }
 .resp-tab-content {
-   border: 1px solid #ccc;
+	border: 1px solid #ccc;
 }
 h2.resp-accordion {
 	font-size:1em;
@@ -70,26 +70,26 @@ h2.resp-tab-active {
 }
 /*Here your can change the breakpoint to set the accordion, when screen resolution changed*/
 @media only screen and (max-width: 768px) {
-ul.resp-tabs-list {
-  	display: none;
-}
-h2.resp-accordion {
-  	display: block;
-}
-.resp-vtabs .resp-tab-content {
-  	border: 1px solid #C1C1C1;
-}
-.resp-vtabs .resp-tabs-container {
-	border: none;
-	float: none;
-	width: 100%;
-	min-height: initial;
-	clear: none;
-}
-.resp-accordion-closed {
-	display: none !important;
-}
-.resp-vtabs .resp-tab-content:last-child {
-	border-bottom: 1px solid #c1c1c1 !important;
-}
+	ul.resp-tabs-list {
+		display: none;
+	}
+	h2.resp-accordion {
+		display: block;
+	}
+	.resp-vtabs .resp-tab-content {
+		border: 1px solid #C1C1C1;
+	}
+	.resp-vtabs .resp-tabs-container {
+		border: none;
+		float: none;
+		width: 100%;
+		min-height: initial;
+		clear: none;
+	}
+	.resp-accordion-closed {
+		display: none !important;
+	}
+	.resp-vtabs .resp-tab-content:last-child {
+		border-bottom: 1px solid #c1c1c1 !important;
+	}
 }

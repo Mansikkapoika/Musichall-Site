@@ -41,6 +41,20 @@ class controleurAccueil {
 
 		$getCat = $this->get->getCat();
 
+		$lastProd = $this->get->getDerniersProduits();
+		$randomProd = $this->get->getProduitsAleatoire();
+
+		// Fonction de troncage 
+		function trunque($str, $nb) {
+			if (strlen($str) > $nb) {
+				$str = substr($str, 0, $nb);
+				$position_espace = strrpos($str, " ");
+				$texte = substr($str, 0, $position_espace); 
+				$str = $texte."...";
+			}
+			return $str;
+		}
+
 	if (isset($_SESSION['username']))	// Si connecté
 	{
 		require_once 'index/view_index.php';

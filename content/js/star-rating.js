@@ -1,4 +1,4 @@
-﻿/* 
+/* 
  * ---------------------------------------- *
  * Star Rating                              *
  * JavaScript                               *
@@ -7,7 +7,7 @@
  * ---------------------------------------- *
  */
 
-(function ($) {
+ (function ($) {
     $.fn.starRating = function (s) {
         return this.each(function () {
             var $ratingElement = $(this);

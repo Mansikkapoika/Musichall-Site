@@ -1,5 +1,5 @@
 <?php
-//Chargement du modèle contenant les appels à la base de données
+//Chargement du modÃ¨le contenant les appels Ã  la base de donnÃ©es
 if(file_exists(getcwd().'/../../model/model.php')) {
   require_once getcwd().'/../../model/produit.php';
 }
@@ -11,13 +11,13 @@ elseif(file_exists(getcwd().'/model/model.php')) {
 }
 
 /**
- * Permet de créer un produit pour un ajout ultérieur dans le panier
+ * Permet de crÃ©er un produit pour un ajout ultÃ©rieur dans le panier
  */
 class Produit
 {
-  private $idMateriel;	// Référence du produit
-	private $libelle;   // Libellé du produit
-	private $qte;   // Quantité du produit
+  private $idMateriel;	// RÃ©fÃ©rence du produit
+	private $libelle;   // LibellÃ© du produit
+	private $qte;   // QuantitÃ© du produit
 	private $prixAchHT;  // Prix du produit
   // private $Prod;
 
@@ -39,8 +39,8 @@ class Produit
   } */
 
  /**
-  * Constructeur d'un produit, sa référence est passé en paramètre
-  * Les autres informations sont obtenues via la base de données
+  * Constructeur d'un produit, sa rÃ©fÃ©rence est passÃ© en paramÃ¨tre
+  * Les autres informations sont obtenues via la base de donnÃ©es
   * @param type $reference 
   */       
  public function Produit ($reference) // Constructeur 
@@ -53,7 +53,7 @@ class Produit
 }		
 
   /**
-   * Augmente la quantité commandée d'une unité
+   * Augmente la quantitÃ© commandÃ©e d'une unitÃ©
    * @param type $quantite  Entier
    */
   
@@ -63,7 +63,7 @@ class Produit
   }
   
   /**
-   * Diminue la quantité commandée d'une unité
+   * Diminue la quantitÃ© commandÃ©e d'une unitÃ©
    * @param type $quantite Entier
    */
   public function diminuerQuantite($quantite)
@@ -76,7 +76,7 @@ class Produit
   }
   
   /**
-   * Retourne la référence du produit
+   * Retourne la rÃ©fÃ©rence du produit
    * @return type 
    */
   public function getRef()
@@ -85,7 +85,7 @@ class Produit
  }
 
   /**
-   * Retourne le libellé du produit
+   * Retourne le libellÃ© du produit
    * @return type 
    */
   public function getLib()
@@ -94,7 +94,7 @@ class Produit
  }
 
   /**
-   * Retourne la quantité commmandée
+   * Retourne la quantitÃ© commmandÃ©e
    * @return type 
    */
   public function getQte()

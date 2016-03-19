@@ -51,7 +51,7 @@
 
                 //Assigning the 'aria-controls' to Tab items
                 var count = 0,
-                    $tabContent;
+                $tabContent;
                 $respTabs.find('.resp-tab-item').each(function () {
                     $tabItem = $(this);
                     $tabItem.attr('aria-controls', 'tab_item-' + (count));
@@ -103,7 +103,7 @@
                     });
                 });
             });
-        }
-    });
+}
+});
 })(jQuery);
 

@@ -106,6 +106,7 @@ article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, s
 		background:#e44f2b;
 		padding:5px 0;
 		position:relative;
+		/* centrer */
 	}
 	.navigation span.left-ribbon{
 		position: absolute;
@@ -137,6 +138,7 @@ article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, s
 		*zoom: 1;
 		background:#e44f2b;
 		border-bottom:1px solid #DB3C15;
+		margin-left: 10%;
 	}
 	.nav:before,
 	.nav:after {

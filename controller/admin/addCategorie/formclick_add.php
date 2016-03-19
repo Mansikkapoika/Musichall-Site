@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 // Début du contrôleur du formulaire d'ajout, passage des paramètres (environnement de passage des variables) éventuels
 require_once 'form_add.php';
 $ctrl = new ControleurAddCat();

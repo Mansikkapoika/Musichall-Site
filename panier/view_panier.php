@@ -1,4 +1,4 @@
-﻿<?php ob_start(); ?>
+<?php ob_start(); ?>
 <?php if(isset($_SESSION['error']))
 { ?>
 	<div class="error"><h3>

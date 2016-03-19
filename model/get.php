@@ -56,5 +56,18 @@ class Get extends Model {
 		return $this->getBdd()->query("SELECT * FROM materiel WHERE idMateriel = '$idMat' AND idSousCategorie='$idSouscat'");
 	}
 
+	public function getDerniersProduits()
+	{
+		return $this->getBdd()->query("SELECT * FROM materiel ORDER BY idMateriel DESC LIMIT 0,12");
+	}
 
+	public function getProduitsAleatoire()
+	{
+		return $this->getBdd()->query("SELECT * FROM materiel ORDER BY RAND() DESC LIMIT 0,12");
+	}
+
+	public function getProduitSimilaire($id)
+	{
+		return $this->getBdd()->query("SELECT * FROM materiel WHERE idSousCategorie = '$id' ORDER BY RAND() DESC LIMIT 0,5");
+	}
 }

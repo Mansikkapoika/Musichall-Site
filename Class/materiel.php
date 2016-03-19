@@ -1,5 +1,5 @@
 <?php
-//Chargement du modèle contenant les appels à la base de données
+//Chargement du modÃ¨le contenant les appels Ã  la base de donnÃ©es
 
 if(file_exists(getcwd().'/../../model/model.php')) {
   require_once getcwd().'/../../model/produit.php';
@@ -12,15 +12,15 @@ elseif(file_exists(getcwd().'/model/model.php')) {
 }
 
 /**
- * Permet de créer un produit pour un ajout ultérieur dans le panier
+ * Permet de crÃ©er un produit pour un ajout ultÃ©rieur dans le panier
  */
 class Materiel
 {
-     private $idMateriel;	   // Référence du produit
-	   private $libelle;     // Libellé du produit
+     private $idMateriel;	   // RÃ©fÃ©rence du produit
+	   private $libelle;     // LibellÃ© du produit
 	   private $prixAchHT;   // Prix du produit
 	  //private $photo;  // Photo du produit
-    //private $idSousCategorie;  // Lien vers la catégorie (sous plutot)
+    //private $idSousCategorie;  // Lien vers la catÃ©gorie (sous plutot)
 
  /**
   * Constructeur d'une fleur
@@ -42,7 +42,7 @@ public function __construct () // Constructeur
 
 
   /**
-   * Retourne la référence de la fleur
+   * Retourne la rÃ©fÃ©rence de la fleur
    * @return type 
    */
   public function getRef()
@@ -51,7 +51,7 @@ public function __construct () // Constructeur
  }
  
   /**
-   * Retourne le libellé de la fleur
+   * Retourne le libellÃ© de la fleur
    * @return type 
    */
   public function getDesignation()

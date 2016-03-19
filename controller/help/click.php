@@ -1,5 +1,5 @@
 <?php
 // Début du contrôleur, passage des paramètres (environnement de passage des variables) éventuels
 require_once 'control.php';
-$ctrl = new controleurCommentaires();
-$ctrl->afficheCommentaires();
+$ctrl = new controleurHelp();
+$ctrl->afficheHelp();

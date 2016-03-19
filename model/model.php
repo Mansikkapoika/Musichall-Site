@@ -1,11 +1,11 @@
-﻿<?php
+<?php
 
 // Connexion à la base de données en PDO
 function BDDConnexionPDO()
 {
 	$PARAM_hote='localhost'; 	$PARAM_port='3306';
 	$PARAM_nom_bd='musichall'; 	$PARAM_utilisateur='root'; 
-	$PARAM_mot_passe='mangos'; 
+	$PARAM_mot_passe=''; 
 	try
 	{      $connexion = new PDO('mysql:host='.$PARAM_hote.'; dbname='.$PARAM_nom_bd, $PARAM_utilisateur, $PARAM_mot_passe);
 }
@@ -26,7 +26,7 @@ class Model
 
 		$host='localhost';
 		$user='root';
-		$password='mangos';
+		$password='';
 		$database='musichall';
 		$port='3306';
 
