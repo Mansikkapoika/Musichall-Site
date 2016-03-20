@@ -33,6 +33,14 @@
 					</div>
 					<div class="clear"></div>
 				</div>
+				<div class="add-banner add-banner2">
+					<img src="../content/images/computer.png" alt="" />
+					<div class="banner-desc">
+						<h4>Informations</h4>
+						<a href="/2014-musichall/infos">Cliquez ici</a>
+					</div>
+					<div class="clear"></div>
+				</div>
 			</div>
 			
 			<!-- Contenu de droite -->

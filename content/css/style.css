@@ -1617,7 +1617,7 @@ article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, s
 
 	/* Tableaux */
 
-	.tftable {font-size:14px;color:#333333;width:100%;border-width: 1px;border-color: #ebab3a;border-collapse: collapse;}
+	.tftable {font-size:14px;color:#333333;width:100%;border-width: 1px;border-color: #ebab3a;border-collapse: collapse;margin-top: 5px;margin-left: 20px;}
 	.tftable th {font-size:14px;background-color:#e6983b;border-width: 1px;padding: 8px;border-style: solid;border-color: #ebab3a;text-align:left;}
 	.tftable tr {background-color:#f0c169;}
 	.tftable td {font-size:14px;border-width: 1px;padding: 8px;border-style: solid;border-color: #ebab3a;}

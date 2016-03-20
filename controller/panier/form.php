@@ -49,7 +49,7 @@ class ControleurPanier {
 		$_SESSION['error'] = "Votre produit ".$prod->getRef()." a été ajouté au panier";
 
 		echo "<SCRIPT LANGUAGE='JavaScript' TYPE='text/javascript'>  
-		alert('Votre produit ".$prod->getRef()." a été ajouté au panier');
+		alert('Votre produit ".$prod->getRef()." a \351t\351 ajout\351 au panier');
 		document.location='../../panier/';
 	</SCRIPT>";
 

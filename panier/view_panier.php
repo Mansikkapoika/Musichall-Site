@@ -55,7 +55,7 @@
 						{ ?>
 					<TR>
 						<TD><?= $unProd->getRef(); ?></TD>
-						<TD><?= $unProd->getLib(); ?></TD>
+						<TD><?= utf8_encode($unProd->getLib()); ?></TD>
 						<TD><?= $unProd->getPrix(); ?></TD>
 						<TD><a href='?ref=<?= $unProd->getRef(); ?>&action=diminuerProduit'><img src='../content/images/del_panier.png'/></a>  <?= $unProd->getQte(); ?>  <a href='?ref=<?= $unProd->getRef(); ?>&action=augmenterProduit'><img src='../content/images/add_panier.png'/></a></TD>
 						<TD><?= $unProd->getQte()*$unProd->getPrix(); ?></TD>
