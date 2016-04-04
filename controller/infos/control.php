@@ -63,7 +63,7 @@ class controleurInfos {
 	}
 	else
 	{
-		require_once $this->Dir.'infos/view_infos.php                                        ';
+		require_once $this->Dir.'infos/view_infos.php';
 		require_once $this->Dir.'gabarit.php';
 	}
 

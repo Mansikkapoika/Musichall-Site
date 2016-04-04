@@ -1359,6 +1359,26 @@ article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, s
 	.mybutton:hover {
 		background: #292929;
 	}
+	.mybuttonCommand {
+		font-size:16px;
+		padding:10px 25px;
+		font-family: 'Ubuntu Condensed', sans-serif;
+		background:#e44f2b;
+		color: #FFF;
+		border:none;
+		text-decoration: none;
+		outline: 0;
+		cursor:pointer;
+		-webkit-transition: all 0.5s ease-in-out;
+		-moz-transition: all 0.5s ease-in-out;
+		-o-transition: all 0.5s ease-in-out;
+		transition: all 0.5s ease-in-out;
+		-webkit-apperance:none;
+		position:relative;
+	}
+	.mybuttonCommand:hover {
+		background: #292929;
+	}
 	.map {
 		margin-top:1em;
 	}

@@ -61,6 +61,8 @@ class controleurCommand {
 			}
 		}
 
+	if (isset($_SESSION['username']))      // Si connecté
+	{
 		// Récupération de l'id de l'utilisateur
 		$idUtilisateur = $this->user->getUser($_SESSION['username']);
 		
@@ -68,14 +70,12 @@ class controleurCommand {
 		$tab = $this->mcommand->getCommand($idUtilisateur['idUtilisateur']);	
 		$getMat = $tab->fetch_assoc();		
 
-	if (isset($_SESSION['username']))      // Si connecté
-	{
 		require_once $this->Dir.'command/view_command.php';
 		require_once $this->Dir.'gabarit.php';
 	}
 	else
 	{
-		require_once $this->Dir.'command/view_command.php';
+		require_once $this->Dir.'404/view_nonconnecte.php';
 		require_once $this->Dir.'gabarit.php';
 	}
 

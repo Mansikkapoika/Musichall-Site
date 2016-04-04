@@ -57,17 +57,5 @@
 			<span class="left-ribbon"> </span> 
 			<span class="right-ribbon"> </span>    
 		</div>
-		<!--
-		<div class="header_bottom">
-			<div class="slider-text">
-				<h2>Les promos sont là ! <br/></h2>
-				<p>Du matériel à prix réduits sont disponibles<br/> dans la catégorie des promotions.</p>
-				<a href="#">Promotions</a>
-			</div>
-			<div class="slider-img">
-				<img src="/2014-musichall/content/images/slider-img.png" alt="" />
-			</div>
-			<div class="clear"></div>
-		</div> -->
 	</div>
 </div>

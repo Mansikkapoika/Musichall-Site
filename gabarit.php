@@ -56,7 +56,7 @@
 			<?php }
 			else
 				{ ?>
-			<div class="panier"><h3><div class="bloc"><i class="fa fa-shopping-cart"></i> Panier : <?php echo $_SESSION['Panier']->getNbProd(); ?> article(s) <?php $chem = $this->Dir."2014-musichall/panier"; ?><a href="<?= $chem; ?>">Voir</a></div></h3></div>
+			<div class="panier"><h3><div class="bloc"><i class="fa fa-shopping-cart"></i> Panier : <?php echo $_SESSION['Panier']->getNbProd(); ?> article(s) <?php $chem = "/2014-musichall/panier"; ?><a href="<?= $chem; ?>">Voir</a></div></h3></div>
 			<?php } ?>
 			<div class="line"></div>
 			<!-- Barre du panier -->

@@ -64,7 +64,7 @@
 					<?php } ?>
 				</table></div>
 				<input type="hidden" name="valide"><br />
-				<input type="submit" value="Passer la commande"></form>
+				<input type="submit" value="Passer la commande" class="mybuttonCommand"></form>
 
 
 				<!-- Partie d'articles divers (remplissages) -->
