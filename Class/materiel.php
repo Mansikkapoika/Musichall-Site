@@ -19,6 +19,7 @@ class Materiel
      private $idMateriel;	   // Référence du produit
 	   private $libelle;     // Libellé du produit
 	   private $prixAchHT;   // Prix du produit
+     private $nbstock;
 	  //private $photo;  // Photo du produit
     //private $idSousCategorie;  // Lien vers la catégorie (sous plutot)
 
@@ -67,6 +68,11 @@ public function __construct () // Constructeur
   {
    return ($this->prixAchHT);  
  }
+
+ public function getStock()
+ {
+  return ($this->nbstock);
+}
 
   /**
    * Retourne le prix du produit

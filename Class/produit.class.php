@@ -19,6 +19,7 @@ class Produit
 	private $libelle;   // Libellé du produit
 	private $qte;   // Quantité du produit
 	private $prixAchHT;  // Prix du produit
+  private $nbstock;
   // private $Prod;
 
 /*  public function __construct()
@@ -50,6 +51,7 @@ class Produit
   $this->libelle = $unMat->getDesignation();
   $this->qte = 1;
   $this->prixAchHT = $unMat->getPrix();
+  $this->nbstock = $unMat->getStock();
 }		
 
   /**
@@ -110,6 +112,11 @@ class Produit
   {
    return ($this->prixAchHT);  
  }
+
+ public function getStock()
+ {
+  return ($this->nbstock);
+}
 
 
 }

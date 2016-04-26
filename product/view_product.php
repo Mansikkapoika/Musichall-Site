@@ -51,13 +51,14 @@
 									<li><span>Modèle:</span> &nbsp; <?= $getMat['Modele']; ?></li>
 									<li><span>Marque:</span> &nbsp; <?= $getMat['Marque']; ?></li>
 									<li><span>Fournisseur:</span>&nbsp; <?= $getMat['Fournisseur']; ?></li>
+									<li><span>Stock:</span>&nbsp; <?= $getMat['nbstock']; ?></li>
 								</ul>
 							</div>
 							<div class="share-desc">
 								<!-- Début formulaire (passage de la ref et de la quantité) -->
 								<form method="post" action="../controller/panier/formclick.php">
 									<div class="share">
-										<p>Nombre d'unités :</p><input type="number" class="text_box" type="text" name="quantite" value="1" min="1" max="50" />				
+										<p>Nombre d'unités :</p><input type="number" class="text_box" type="text" name="quantite" value="1" min="1" max="50" />	
 									</div>
 									<!-- Référence ici pour la passer dans le controleur du formulaire -->
 									<input type="hidden" name="reference" value="<?= $getMat['idMateriel']; ?>" />

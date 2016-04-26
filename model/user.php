@@ -17,9 +17,8 @@ class User extends Model {
 
 	public function addUser($nom,$prenom,$username,$email,$password,$newsletter)
 	{
-		$this->getBdd()->query("INSERT INTO utilisateur VALUES ('', '$nom', '$prenom', '$username', '$password', '$email', NOW(), $newsletter, 1)");
+		$this->getBdd()->query("INSERT INTO utilisateur VALUES ('', '$nom', '$prenom', '$username', '$password', '$email', '', '', '', NOW(), $newsletter, 1)");
 	}
-
 
 	// A changer
 
