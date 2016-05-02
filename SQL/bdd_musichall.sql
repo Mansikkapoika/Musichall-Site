@@ -11,19 +11,19 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 -- Schema mydb
 -- -----------------------------------------------------
 -- -----------------------------------------------------
--- Schema musichall1
+-- Schema 2014-musichall_musichall
 -- -----------------------------------------------------
 
 -- -----------------------------------------------------
--- Schema musichall1
+-- Schema 2014-musichall_musichall
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `musichall1` DEFAULT CHARACTER SET utf8 ;
-USE `musichall1` ;
+CREATE SCHEMA IF NOT EXISTS `2014-musichall_musichall` DEFAULT CHARACTER SET utf8 ;
+USE `2014-musichall_musichall` ;
 
 -- -----------------------------------------------------
--- Table `musichall1`.`categorie`
+-- Table `2014-musichall_musichall`.`categorie`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `musichall1`.`categorie` (
+CREATE TABLE IF NOT EXISTS `2014-musichall_musichall`.`categorie` (
 	`idCategorie` INT NOT NULL AUTO_INCREMENT,
 	`libelle` VARCHAR(45) NOT NULL,
 	PRIMARY KEY (`idCategorie`))
@@ -33,9 +33,9 @@ DEFAULT CHARACTER SET = utf8;
 
 
 -- -----------------------------------------------------
--- Table `musichall1`.`utilisateur`
+-- Table `2014-musichall_musichall`.`utilisateur`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `musichall1`.`utilisateur` (
+CREATE TABLE IF NOT EXISTS `2014-musichall_musichall`.`utilisateur` (
 	`idUtilisateur` INT NOT NULL AUTO_INCREMENT,
 	`nom` VARCHAR(45) NOT NULL,
 	`prenom` VARCHAR(45) NOT NULL,
@@ -54,9 +54,9 @@ DEFAULT CHARACTER SET = utf8;
 
 
 -- -----------------------------------------------------
--- Table `musichall1`.`souscategorie`
+-- Table `2014-musichall_musichall`.`souscategorie`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `musichall1`.`souscategorie` (
+CREATE TABLE IF NOT EXISTS `2014-musichall_musichall`.`souscategorie` (
 	`idSousCategorie` INT NOT NULL AUTO_INCREMENT,
 	`libelle` VARCHAR(45) NOT NULL,
 	`idCategorie` INT NOT NULL,
@@ -64,7 +64,7 @@ CREATE TABLE IF NOT EXISTS `musichall1`.`souscategorie` (
 	INDEX `fk_souscategorie_categorie1_idx` (`idCategorie` ASC),
 	CONSTRAINT `fk_souscategorie_categorie1`
 	FOREIGN KEY (`idCategorie`)
-	REFERENCES `musichall1`.`categorie` (`idCategorie`)
+	REFERENCES `2014-musichall_musichall`.`categorie` (`idCategorie`)
 	ON DELETE NO ACTION
 	ON UPDATE NO ACTION)
 ENGINE = InnoDB
@@ -73,9 +73,9 @@ DEFAULT CHARACTER SET = utf8;
 
 
 -- -----------------------------------------------------
--- Table `musichall1`.`materiel`
+-- Table `2014-musichall_musichall`.`materiel`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `musichall1`.`materiel` (
+CREATE TABLE IF NOT EXISTS `2014-musichall_musichall`.`materiel` (
 	`idMateriel` INT NOT NULL AUTO_INCREMENT,
 	`libelle` VARCHAR(45) NOT NULL,
 	`description` VARCHAR(255) NOT NULL,
@@ -90,7 +90,7 @@ CREATE TABLE IF NOT EXISTS `musichall1`.`materiel` (
 	INDEX `fk_Materiel_SousCategorie1_idx` (`idSousCategorie` ASC),
 	CONSTRAINT `fk_Materiel_SousCategorie1`
 	FOREIGN KEY (`idSousCategorie`)
-	REFERENCES `musichall1`.`souscategorie` (`idSousCategorie`)
+	REFERENCES `2014-musichall_musichall`.`souscategorie` (`idSousCategorie`)
 	ON DELETE NO ACTION
 	ON UPDATE NO ACTION)
 ENGINE = InnoDB
@@ -98,9 +98,9 @@ DEFAULT CHARACTER SET = utf8;
 
 
 -- -----------------------------------------------------
--- Table `musichall1`.`commentaire`
+-- Table `2014-musichall_musichall`.`commentaire`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `musichall1`.`commentaire` (
+CREATE TABLE IF NOT EXISTS `2014-musichall_musichall`.`commentaire` (
 	`idCommentaire` INT NOT NULL AUTO_INCREMENT,
 	`libelle` VARCHAR(255) NOT NULL,
 	`idUtilisateur` INT NOT NULL,
@@ -110,12 +110,12 @@ CREATE TABLE IF NOT EXISTS `musichall1`.`commentaire` (
 	INDEX `fk_Commentaire_Materiel1_idx` (`idMateriel` ASC),
 	CONSTRAINT `fk_Commentaire_Utilisateur1`
 	FOREIGN KEY (`idUtilisateur`)
-	REFERENCES `musichall1`.`utilisateur` (`idUtilisateur`)
+	REFERENCES `2014-musichall_musichall`.`utilisateur` (`idUtilisateur`)
 	ON DELETE NO ACTION
 	ON UPDATE NO ACTION,
 	CONSTRAINT `fk_Commentaire_Materiel1`
 	FOREIGN KEY (`idMateriel`)
-	REFERENCES `musichall1`.`materiel` (`idMateriel`)
+	REFERENCES `2014-musichall_musichall`.`materiel` (`idMateriel`)
 	ON DELETE NO ACTION
 	ON UPDATE NO ACTION)
 ENGINE = InnoDB
@@ -123,9 +123,9 @@ DEFAULT CHARACTER SET = utf8;
 
 
 -- -----------------------------------------------------
--- Table `musichall1`.`commande`
+-- Table `2014-musichall_musichall`.`commande`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `musichall1`.`commande` (
+CREATE TABLE IF NOT EXISTS `2014-musichall_musichall`.`commande` (
 	`idCommande` INT NOT NULL AUTO_INCREMENT,
 	`idUtilisateur` INT NOT NULL,
 	`date` VARCHAR(45) NOT NULL,
@@ -135,28 +135,28 @@ CREATE TABLE IF NOT EXISTS `musichall1`.`commande` (
 	INDEX `fk_Achat_utilisateur1_idx` (`idUtilisateur` ASC),
 	CONSTRAINT `fk_Achat_utilisateur1`
 	FOREIGN KEY (`idUtilisateur`)
-	REFERENCES `musichall1`.`utilisateur` (`idUtilisateur`)
+	REFERENCES `2014-musichall_musichall`.`utilisateur` (`idUtilisateur`)
 	ON DELETE NO ACTION
 	ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `musichall1`.`ligneCom`
+-- Table `2014-musichall_musichall`.`ligneCom`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `musichall1`.`ligneCom` (
+CREATE TABLE IF NOT EXISTS `2014-musichall_musichall`.`ligneCom` (
 	`idMateriel` INT NOT NULL,
 	`idCommande` INT NOT NULL,
 	`quantite` VARCHAR(45) NULL,
 	INDEX `fk_ligneCom_materiel1_idx` (`idMateriel` ASC),
 	CONSTRAINT `fk_ligneCom_materiel1`
 	FOREIGN KEY (`idMateriel`)
-	REFERENCES `musichall1`.`materiel` (`idMateriel`)
+	REFERENCES `2014-musichall_musichall`.`materiel` (`idMateriel`)
 	ON DELETE NO ACTION
 	ON UPDATE NO ACTION,
 	CONSTRAINT `fk_ligneCom_Commande1`
 	FOREIGN KEY (`idCommande`)
-	REFERENCES `musichall1`.`commande` (`idCommande`)
+	REFERENCES `2014-musichall_musichall`.`commande` (`idCommande`)
 	ON DELETE NO ACTION
 	ON UPDATE NO ACTION)
 ENGINE = InnoDB;

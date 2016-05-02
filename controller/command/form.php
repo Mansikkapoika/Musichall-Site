@@ -69,6 +69,8 @@ class ControleurCommand {
 			foreach ($Coll as $key=>$unProd)
 			{
 				$this->mcommand->insertCommand($unProd->getRef(), $lastid, $unProd->getQte());
+				// On retire le produit commandé du stock 
+				$this->mcommand->retirerStock($unProd->getQte(),$unProd->getRef());
 			}
 
 			// On vide alors le panier et on redirige

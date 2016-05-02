@@ -159,7 +159,7 @@
 					<ul class="popular-products">
 						<?php while ($item = $prodSimilaires->fetch_array()) { ?>
 						<li>
-							<h4><a href="?souscat=<?= $item['idSousCategorie']; ?>&mat=<?php echo $item['idMateriel']; ?>"><?= trunque($item['libelle'], 20); ?></a></h4>
+							<h4><a href="?souscat=<?= $item['idSousCategorie']; ?>&mat=<?php echo $item['idMateriel']; ?>"><?= trunque($item['libelle'], 26); ?></a></h4>
 							<a href="?souscat=<?= $item['idSousCategorie']; ?>&mat=<?php echo $item['idMateriel']; ?>"><img style="width: 120px; height: 120px;" src="../<?= $item['cheminImage']; ?>" alt="" /></a>
 							<div class="price-details">
 								<div class="price-number">

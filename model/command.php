@@ -18,6 +18,11 @@ class mCommand extends Model {
 		$this->getBdd()->query("INSERT INTO ligneCom VALUES ('$ref', '$idCommande', '$qte');");
 	}
 
+	public function retirerStock($qte,$idMat)
+	{
+		$this->getBdd()->query("UPDATE materiel SET nbstock = nbstock - $qte WHERE idMateriel = $idMat");
+	}
+
 	public function getCommand($idUtilisateur)
 	{
 		return $this->getBdd()->query("SELECT * FROM commande WHERE idUtilisateur = $idUtilisateur");

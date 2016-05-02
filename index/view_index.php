@@ -71,7 +71,7 @@
 				<div class="section group">
 					<?php while ($item = $randomProd->fetch_array()) { ?>
 					<div class="grid_1_of_4 images_1_of_4">
-						<h4><a href="product/?souscat=<?= $item['idSousCategorie']; ?>&mat=<?php echo $item['idMateriel']; ?>"><?= trunque($item['libelle'], 20); ?></a></h4>
+						<h4><a href="product/?souscat=<?= $item['idSousCategorie']; ?>&mat=<?php echo $item['idMateriel']; ?>"><?= trunque($item['libelle'], 26); ?></a></h4>
 						<a href="product/?souscat=<?= $item['idSousCategorie']; ?>&mat=<?php echo $item['idMateriel']; ?>"><img style="width: 100px; height: 100px;" src="<?= $item['cheminImage']; ?>" alt="" /></a>
 						<div class="price-details">
 							<div class="price-number">

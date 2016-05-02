@@ -62,6 +62,11 @@ class Produit
   public function augmenterQuantite($quantite)
   {
     $this->qte = $this->qte + $quantite;
+    if ($this->qte > $this->nbstock)
+    {
+      $this->qte = $this->qte -1;
+    }
+
   }
   
   /**
